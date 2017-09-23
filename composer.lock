@@ -405,6 +405,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v5.5.12",
             "source": {
                 "type": "git",
@@ -415,6 +416,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/74f5831447817034838b3539c644303036df3d8e",
                 "reference": "74f5831447817034838b3539c644303036df3d8e",
+=======
+            "version": "v5.5.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "56f1ffd0880255e9ebbf0dbf47024cc5c2941c7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/56f1ffd0880255e9ebbf0dbf47024cc5c2941c7a",
+                "reference": "56f1ffd0880255e9ebbf0dbf47024cc5c2941c7a",
+>>>>>>> c619b251585e6d40dc0e82cca2c46d6bb65165c7
                 "shasum": ""
             },
             "require": {
@@ -533,7 +546,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2017-09-22T13:33:35+00:00"
+=======
+            "time": "2017-09-21T18:59:13+00:00"
+>>>>>>> c619b251585e6d40dc0e82cca2c46d6bb65165c7
         },
         {
             "name": "laravel/tinker",
@@ -1174,6 +1191,7 @@
         },
         {
             "name": "ramsey/uuid",
+<<<<<<< HEAD
             "version": "3.7.1",
             "source": {
                 "type": "git",
@@ -1184,6 +1202,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/45cffe822057a09e05f7bd09ec5fb88eeecd2334",
                 "reference": "45cffe822057a09e05f7bd09ec5fb88eeecd2334",
+=======
+            "version": "3.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/uuid.git",
+                "reference": "0ef23d1b10cf1bc576e9d865a7e9c47982c5715e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0ef23d1b10cf1bc576e9d865a7e9c47982c5715e",
+                "reference": "0ef23d1b10cf1bc576e9d865a7e9c47982c5715e",
+>>>>>>> c619b251585e6d40dc0e82cca2c46d6bb65165c7
                 "shasum": ""
             },
             "require": {
@@ -1252,7 +1282,11 @@
                 "identifier",
                 "uuid"
             ],
+<<<<<<< HEAD
             "time": "2017-09-22T20:46:04+00:00"
+=======
+            "time": "2017-08-04T13:39:04+00:00"
+>>>>>>> c619b251585e6d40dc0e82cca2c46d6bb65165c7
         },
         {
             "name": "swiftmailer/swiftmailer",

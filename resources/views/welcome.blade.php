@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -91,5 +92,18 @@
                 </div>
             </div>
         </div>
+=======
+        <title>New Life New Vision Church</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+      <ul>
+        @foreach ($tasks as $task)
+          <li>{{ $task }}</li>
+        @endforeach
+      </ul>
+>>>>>>> c619b251585e6d40dc0e82cca2c46d6bb65165c7
     </body>
 </html>
