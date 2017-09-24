@@ -35,10 +35,7 @@ class PostController extends Controller
      */
     public function store()
     {
-        Post::create([
-          'title' => request('title'),
-          'body' => request('body'),
-        ]);
+        Post::create(request(['title', 'body']));
 
         return redirect('/');
     }
