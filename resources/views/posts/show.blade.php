@@ -32,6 +32,7 @@
             <button type="submit" class="btn btn-primary">Add Comment</button>
           </div>
         </form>
+        @include('layouts.errors')
       </div>
     </div>
 
