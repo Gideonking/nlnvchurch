@@ -19,5 +19,21 @@
       </ul>
     </div>
 
+    {{-- Add a comment --}}
+    <hr>
+    <div class="card">
+      <div class="card-body">
+        <form action="/posts/{{ $post->id }}/comments" method="POST">
+          {{ csrf_field() }}
+          <div class="form-group">
+            <textarea class="form-control" name="body" placeholder="Your comment here."></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
   </div>
 @endsection
