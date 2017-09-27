@@ -7,6 +7,11 @@ use App\Post;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('auth', ['only' => 'create']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -42,7 +47,9 @@ class PostController extends Controller
           'body' => 'required'
         ]);
 
-        Post::create(request(['title', 'body']));
+        auth()->user()->publish(
+          new Post(request(['title', 'body']))
+        );
 
         return redirect('/');
     }
