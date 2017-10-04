@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Carbon\Carbon;
+
 class Post extends Model
 {
   public function comments()
@@ -20,5 +22,16 @@ class Post extends Model
       'body' => $body,
       'user_id' => 0
     ]);
+  }
+
+  public function scopeFilter($query, $filters)
+  {
+    if (isset($filters['month']) && $month = $filters['month']) {
+      $query->whereMonth('created_at', Carbon::parse($month)->month);
+    }
+
+    if (isset($filters['year']) && $year = $filters['year']) {
+      $query->whereYear('created_at', $year);
+    }
   }
 }
