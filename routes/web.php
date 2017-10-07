@@ -1,14 +1,5 @@
 <?php
 
-App::bind('App\Billing\Stripe', function () {
-  return new \App\billing\Stripe(config('services.stripe.secret'));
-});
-
-$stripe = resolve('App\Billing\Stripe');
-// $stripe = App::make('App\Billing\Stripe');
-
-dd($stripe);
-
 Route::get('/', 'PostController@index')->name('home');
 Route::get('/home', 'PostController@index')->name('home');
 Route::get('/posts/create', 'PostController@create');
