@@ -4,7 +4,19 @@
   <div class="col-sm-8 blog-main">
 
     <h1>{{ $post->title }}</h1>
+
+    @if(count($post->tags))
+      <div class="clearfix">
+        @foreach($post->tags as $tag)
+          <a class="badge badge-secondary" href="/posts/tags/{{ $tag->name }}">
+            {{ $tag->name }}
+          </a>
+        @endforeach
+      </div>
+    @endif
+
     {{ $post->body }}
+
     <hr>
     <div class="comments">
       <ul class="list-group">
