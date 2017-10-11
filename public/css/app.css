@@ -8350,6 +8350,36 @@ button.close {
   }
 }
 
+.nav {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: #222222;
+  text-align: center;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav__link:active {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.nav .nav__icon {
+  font-size: 3rem;
+}
+
+.nav__text {
+  font-size: 1.25rem;
+}
+
 #flash-message {
   position: absolute;
   bottom: 20px;

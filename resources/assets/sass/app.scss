@@ -8,6 +8,32 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+.nav {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #222222;
+    text-align: center;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
+  & .nav__icon {
+    font-size: 3rem;
+  }
+  &__text {
+    font-size: 1.25rem;
+  }
+}
+
 #flash-message {
   position: absolute;
   bottom: 20px;
