@@ -1,11 +1,10 @@
 <nav class="nav">
-  <a class="nav__link" href="#">
-    <i class="nav__icon fa fa-leaf" aria-hidden="true"></i>
-    <p class="nav__text">About</p>
+  <a class="nav__link nav__link-logo" href="/">
+    <p class="nav__text">NL<br>NV</p>
   </a>
   <a class="nav__link" href="#">
-    <i class="nav__icon fa fa-users" aria-hidden="true"></i>
-    <p class="nav__text">Staff</p>
+    <i class="nav__icon fa fa-pagelines" aria-hidden="true"></i>
+    <p class="nav__text">About</p>
   </a>
   <a class="nav__link" href="#">
     <i class="nav__icon fa fa-quote-right" aria-hidden="true"></i>
@@ -14,10 +13,6 @@
   <a class="nav__link" href="#">
     <i class="nav__icon fa fa-bullhorn" aria-hidden="true"></i>
     <p class="nav__text">News</p>
-  </a>
-  <a class="nav__link" href="#">
-    <i class="nav__icon fa fa-calendar" aria-hidden="true"></i>
-    <p class="nav__text">Events</p>
   </a>
   <a class="nav__link" href="#">
     <i class="nav__icon fa fa-camera-retro" aria-hidden="true"></i>
@@ -33,7 +28,14 @@
   </a>
   <a class="nav__link" href="#">
     <i class="nav__icon fa fa-map-signs" aria-hidden="true"></i>
-    <p class="nav__text">Directions &amp; Times</p>
+    <p class="nav__text">Directions</p>
+  </a>
+
+  <a class="nav__social" title="Facebook" href="https://www.facebook.com/pages/New-Life-New-Vision-Church/754157684605483" target="_blank">
+    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+  </a>
+  <a class="nav__social" title="YouTube" href="https://www.youtube.com/channel/UCdmLI5xDRzZmNVAch8HCyGg" target="_blank">
+    <i class="fa fa-youtube-play" aria-hidden="true"></i>
   </a>
 
   @if(auth()->check())

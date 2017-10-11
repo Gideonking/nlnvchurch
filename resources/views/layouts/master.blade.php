@@ -23,11 +23,8 @@
   <body>
     @include('layouts.nav')
 
-    <div class="container">
-      <div class="row">
-        @yield('content')
-        @include('layouts.sidebar')
-      </div>
+    <div class="nlnv-container">
+      @yield('content')
     </div>
 
     @include('layouts.footer')
