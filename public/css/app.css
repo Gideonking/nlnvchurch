@@ -8361,6 +8361,12 @@ button.close {
   -webkit-box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.25);
   z-index: 10;
+  opacity: 0;
+  left: -20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .nav__link {
@@ -8371,6 +8377,10 @@ button.close {
   text-align: center;
   padding: 1em;
   border-bottom: 1px solid #e5ecef;
+}
+
+.nav__link.active {
+  cursor: no-drop;
 }
 
 .nav__link:hover,
@@ -8464,6 +8474,11 @@ button.close {
 .nav__social:focus,
 .nav__social:active {
   color: #518F51;
+}
+
+body.loaded .nav {
+  opacity: 1;
+  left: 0;
 }
 
 @media screen and (min-width: 1025px) and (max-height: 740px) {
@@ -8851,6 +8866,14 @@ body {
   position: relative;
   width: calc(100% - 100px);
   margin-left: 100px;
+  top: -50px;
+  opacity: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .nlnv-container--full {
@@ -8864,6 +8887,11 @@ body {
 .nlnv-container:after {
   content: " ";
   display: table;
+}
+
+body.loaded .nlnv-container {
+  top: 0;
+  opacity: 1;
 }
 
 .card-container {

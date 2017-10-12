@@ -8,6 +8,10 @@
   width: 100px;
   box-shadow: 2px 0px 5px 1px rgba(0,0,0,0.25);
   z-index: 10;
+  opacity: 0;
+  left: -20px;
+  transition: 0.5s all;
+  transition-timing-function: ease;
   &__link {
     position: relative;
     display: block;
@@ -16,6 +20,9 @@
     text-align: center;
     padding: 1em;
     border-bottom: 1px solid $lightgrey;
+    &.active {
+      cursor: no-drop;
+    }
     &:hover,
     &:focus,
     &:active {
@@ -86,6 +93,13 @@
     &:active {
       color: $darkgreen;
     }
+  }
+}
+
+body.loaded {
+  .nav {
+    opacity: 1;
+    left: 0;
   }
 }
 

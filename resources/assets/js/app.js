@@ -60,7 +60,30 @@ $(function() {
       prevArrow: '<a class="events-arrow events-arrow--prev" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>'
     });
   }
+
+  enter();
+
+  $('body').on('click', '.nav__link', function(e) {
+    var that = this;
+
+    e.preventDefault();
+    if ($(this).hasClass('active')) return false;
+
+    exit();
+
+    setTimeout(function() {
+      location.href = $(that).attr('href');
+    }, 500);
+  });
 });
+
+function enter() {
+  $('body').addClass('loaded');
+}
+
+function exit() {
+  $('body').removeClass('loaded');
+}
 
 function addZero(n) {
   return n < 10 ? '0' + n : '' + n;

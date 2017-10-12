@@ -23,6 +23,11 @@ body {
     position: relative;
     width: calc(100% - 100px);
     margin-left: 100px;
+    top: -50px;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition-timing-function: ease;
+    transition: 0.5s all;
     &--full {
       position: relative;
       width: 100%;
@@ -34,6 +39,13 @@ body {
       content: " ";
       display: table;
     }
+  }
+}
+
+body.loaded {
+  .nlnv-container {
+    top: 0;
+    opacity: 1;
   }
 }
 

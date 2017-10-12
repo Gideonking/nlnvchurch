@@ -1,9 +1,7 @@
-<div class="nlnv-container">
-  <footer>
-    <p>Copyright © {{ date('Y') }} New Life New Vision Church.<p>
-    <small>Designed/Developed by <a href="http://github.com/scrumptiousdev" target="_blank">ScrumptiousDev</a></small>
-  </footer>
-</div>
+<footer>
+  <p>Copyright © {{ date('Y') }} New Life New Vision Church.<p>
+  <small>Designed/Developed by <a href="http://github.com/scrumptiousdev" target="_blank">ScrumptiousDev</a></small>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/js/app.js" type="text/javascript"></script>
