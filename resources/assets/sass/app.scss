@@ -3,16 +3,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Condiment');
 
-// Variables
-@import "variables";
-@import "nav";
-
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Variables
+@import "variables";
+@import "nav";
+@import "welcome";
+
 html,
 body {
-  background-color: #f1f4f5;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
 }
 
 .nlnv {
@@ -23,9 +24,7 @@ body {
     &--full {
       width: 100%;
       height: 100vh;
-      background-image: url(/images/nlnv-home-banner.png);
-      background-size: cover;
-      background-position: center;
+      min-height: 950px;
     }
     &:before,
     &:after {
@@ -35,31 +34,64 @@ body {
   }
 }
 
-.welcome-text {
-  font-family: 'Condiment', sans-serif;
-  font-size: 4rem;
+.card {
   &-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
   }
-  &--top,
-  &--bottom {
-    position: relative;
+  &-title {
+    margin: 0;
+    background-color: $darkgreen;
+    padding: 1.5rem 2rem;
+    text-transform: uppercase;
+    &--secondary {
+      background-color: $brown;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: $secondary-text;
+      margin: 0;
+      line-height: 1;
+      float: left;
+    }
   }
-  &--top {
-    top: -2rem;
-    left: 10rem;
+  &-link {
+    display: inline-block;
+    float: right;
+    color: $secondary-text;
+    text-decoration: underline;
+    font-size: 1.25rem;
+    line-height: 1;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $secondary-text;
+      text-decoration: underline;
+    }
   }
-  &--bottom {
-    top: 2rem;
-    left: -10rem;
+}
+
+.divider {
+  width: 78px;
+  height: 4px;
+  background: $brown;
+  clear: both;
+  margin: 2rem auto 2rem;
+  outline: 0;
+  border: 0;
+  &--green {
+    background: $green;
   }
-  &-accent {
-    font-size: 8rem;
-  }
+}
+
+.accent--light {
+  color: $green;
+}
+
+.accent--dark {
+  color: $darkgreen;
 }
 
 #flash-message {

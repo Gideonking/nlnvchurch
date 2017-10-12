@@ -6,24 +6,26 @@
   top: 0;
   height: 100%;
   width: 100px;
+  box-shadow: 2px 0px 5px 1px rgba(0,0,0,0.25);
+  z-index: 10;
   &__link {
     position: relative;
     display: block;
     text-decoration: none;
-    color: #6D7F87;
+    color: $primary-text;
     text-align: center;
     padding: 1em;
-    border-bottom: 1px solid #e5ecef;
+    border-bottom: 1px solid $lightgrey;
     &:hover,
     &:focus,
     &:active {
       text-decoration: none;
-      color: #79B379;
+      color: $green;
       &:before {
         left: 0;
       }
       .nav__text {
-        color: #86BA86;
+        color: $green;
       }
     }
     &:before {
@@ -34,29 +36,29 @@
       display: block;
       width: 100%;
       height: 100%;
-      background-color: #f1f4f5;
+      background-color: $offwhite;
       z-index: -1;
       transition: 0.3s left;
     }
     &-logo {
-      background-color: #86BA86;
+      background-color: $green;
       transition: 0.5s background-color;
       padding: 2rem 1rem;
       .nav__text {
         font-weight: 100;
         font-size: 3.5rem;
-        color: #ffffff;
+        color: $secondary-text;
       }
       &:hover,
       &:focus,
       &:active {
         text-decoration: none;
-        background-color: #518F51;
+        background-color: $darkgreen;
         &:before {
           left: -100%;
         }
         .nav__text {
-          color: #ffffff;
+          color: $secondary-text;
         }
       }
     }
@@ -65,10 +67,10 @@
     font-size: 2.5rem;
   }
   &__text {
-    color: #222222;
+    color: $primary-text;
     font-size: 1.1rem;
     margin: 0.5rem 0 0;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     line-height: 1;
   }
@@ -77,12 +79,12 @@
     line-height: 1;
     padding: 2rem 1rem 0;
     font-size: 2.75rem;
-    color: #79B379;
+    color: $green;
     text-align: center;
     &:hover,
     &:focus,
     &:active {
-      color: #518F51;
+      color: $darkgreen;
     }
   }
 }

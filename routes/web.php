@@ -1,10 +1,7 @@
 <?php
+Route::get('/', 'WelcomeController@index')->name('home');
 
-Route::get('/', function() {
-  return view('pages/index');
-})->name('home');
-
-Route::get('/home', 'PostController@index')->name('home');
+// Route::get('/home', 'PostController@index')->name('home');
 Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store');
 Route::get('/posts/{post}', 'PostController@show');

@@ -1,0 +1,196 @@
+.welcome {
+  &-container {
+    background-image: url(/images/nlnv-home-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+  }
+  &-text {
+    color: #222222;
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    &--top,
+    &--bottom,
+    &--sub {
+      position: relative;
+      display: block;
+    }
+    &--top,
+    &--bottom {
+      font-family: 'Condiment', sans-serif;
+      font-size: 4rem;
+    }
+    &--sub {
+      font-weight: 400;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    &--top {
+      top: -3rem;
+      left: -8rem;
+    }
+    &--bottom {
+      top: -7rem;
+      left: 14rem;
+    }
+    &--sub {
+      top: -6rem;
+      letter-spacing: 5px;
+    }
+    &-accent {
+      font-size: 8rem;
+    }
+  }
+  &-card {
+    &-container {
+      position: relative;
+      top: -300px;
+      text-align: center;
+    }
+    &--service {
+      h2 {
+        margin: 0;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    &--join {
+      margin-top: 1rem;
+      h2 {
+        margin: 0;
+        font-size: 5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+    }
+    &--events {
+      margin-top: 8rem;
+      .slick-track {
+        height: 500px;
+      }
+      .slick-slide {
+        background-size: cover;
+        background-repeat: no-repeat;
+        & > * {
+          position: relative;
+        }
+        .events {
+          &-section {
+            height: 100%;
+            &--image {
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+            &--content {
+              background-color: $offwhite;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+          }
+          &-title {
+            font-size: 4rem;
+            color: $primary-text;
+            margin: 0;
+          }
+          &-desc {
+            margin-bottom: 1rem;
+            color: $primary-text;
+            font-size: 1.75rem;
+          }
+          &-btn {
+            background-color: $offwhite;
+            color: $primary-text;
+            display: inline-block;
+            padding: 1rem 4rem;
+            border: 1px solid $darkgrey;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 5px;
+            transition: 0.3s all;
+            &:hover,
+            &:focus,
+            &:active {
+              text-decoration: none;
+              color: $offwhite;
+              background-color: $darkgrey;
+            }
+          }
+        }
+      }
+      .events-arrow {
+        position: absolute;
+        z-index: 2;
+        height: 4rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-weight: 800;
+        font-size: 4rem;
+        line-height: 1;
+        color: $darkgreen;
+        &--next {
+          right: 1rem;
+        }
+        &--prev {
+          left: 1rem;
+        }
+      }
+    }
+  }
+  &-join {
+    &-time {
+      margin: 0;
+      font-size: 3.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    &-label {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      word-spacing: 12px;
+    }
+    &-for {
+      margin-top: 1rem;
+      font-weight: 500;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+  }
+  &-map {
+    height: 100%;
+    &-container {
+      height: 500px;
+    }
+    &-direction {
+      padding: 2rem 1rem 1rem;
+      a {
+        color: $darkgreen;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

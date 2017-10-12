@@ -8,7 +8,7 @@
   </a>
   <a class="nav__link" href="#">
     <i class="nav__icon fa fa-quote-right" aria-hidden="true"></i>
-    <p class="nav__text">Messages</p>
+    <p class="nav__text">Sermons</p>
   </a>
   <a class="nav__link" href="#">
     <i class="nav__icon fa fa-bullhorn" aria-hidden="true"></i>
