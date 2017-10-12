@@ -1,0 +1,59 @@
+.connect {
+  &-container {
+    position: relative;
+    height: 700px;
+    margin-top: 10rem;
+  }
+  &-wrapper {
+    height: 100%;
+    background-image: url(/images/subscription-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & > * {
+      position: relative;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+  }
+  &-title {
+    font-weight: 200;
+    line-height: 1;
+    position: relative;
+    color: $secondary-text;
+    z-index: 2;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 0;
+  }
+  &-icon {
+    color: $secondary-text;
+    font-size: 4rem;
+    transition: 0.3s transform;
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 300px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $secondary-text;
+      transform: scale(1.2);
+    }
+  }
+}

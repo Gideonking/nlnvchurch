@@ -19,6 +19,7 @@
       </div>
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ $ytvidid }}?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
+
     <div class="col-sm-5 card-container">
       <div class="welcome-card--service">
         <h2>Service Times</h2>
@@ -34,17 +35,17 @@
         <p class="welcome-join-for">For Sunday Service</p>
       </div>
     </div>
+
     <div class="col-sm-10 col-sm-offset-1 card-container welcome-card--events">
       <div class="card-title">
         <h2>Events</h2>
-        <a class="card-link" href="#">More</a>
       </div>
       <div class="slider">
         <div>
           <div class="events-section events-section--image col-sm-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
           <div class="events-section events-section--content col-sm-6">
             <h3 class="events-title">NLNV Korean School Begins</h3>
-            <hr class="divider divider--green">
+            <hr class="divider divider--darkgreen">
             <div class="events-desc">
               <p>9.23.2017</p>
               <p>Every Saturday 9:30AM - 11:30AM</p>
@@ -56,7 +57,7 @@
           <div class="events-section events-section--image col-sm-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
           <div class="events-section events-section--content col-sm-6">
             <h3 class="events-title">NLNV Korean School Begins</h3>
-            <hr class="divider divider--green">
+            <hr class="divider divider--darkgreen">
             <div class="events-desc">
               <p>9.23.2017</p>
               <p>Every Saturday 9:30AM - 11:30AM</p>
@@ -66,7 +67,9 @@
         </div>
       </div>
     </div>
-    <!-- <div class="col-sm-10 col-sm-offset-1 welcome-map-container"> -->
+
+    <!--
+    <div class="col-sm-10 col-sm-offset-1 welcome-map-container">
       <div class="welcome-map"></div>
       <script>
         var geocoder;
@@ -352,7 +355,21 @@
           }
         }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo7ScNH3wxU7P21MtOf2weUTpb0a3SHKA&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+    </div>
+     -->
+  </div>
+
+  <div class="connect-container">
+    <div class="connect-wrapper">
+      <h2 class="connect-title">Connect with us</h2>
+      <hr class="divider divider--darkgreen">
+      <div class="connect-icon-wrapper">
+        <a class="connect-icon" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+      </div>
     </div>
   </div>
 @endsection

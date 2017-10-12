@@ -9,7 +9,9 @@
 // Variables
 @import "variables";
 @import "nav";
+@import "footer";
 @import "welcome";
+@import "connect";
 
 html,
 body {
@@ -22,6 +24,7 @@ body {
     width: calc(100% - 100px);
     margin-left: 100px;
     &--full {
+      position: relative;
       width: 100%;
       height: 100vh;
       min-height: 950px;
@@ -42,32 +45,33 @@ body {
   }
   &-title {
     margin: 0;
-    background-color: $darkgreen;
-    padding: 1.5rem 2rem;
     text-transform: uppercase;
+    text-align: left;
     &--secondary {
       background-color: $brown;
     }
     h2 {
-      font-size: 1.5rem;
-      font-weight: 300;
-      color: $secondary-text;
+      display: inline-block;
+      font-size: 5rem;
+      font-weight: 600;
+      color: $primary-text;
       margin: 0;
       line-height: 1;
-      float: left;
     }
   }
   &-link {
     display: inline-block;
-    float: right;
-    color: $secondary-text;
+    color: $green;
     text-decoration: underline;
-    font-size: 1.25rem;
+    font-size: 2rem;
     line-height: 1;
+    vertical-align: baseline;
+    transition: 0.3s color;
+    margin-left: 1rem;
     &:hover,
     &:focus,
     &:active {
-      color: $secondary-text;
+      color: $darkgreen;
       text-decoration: underline;
     }
   }
@@ -81,8 +85,12 @@ body {
   margin: 2rem auto 2rem;
   outline: 0;
   border: 0;
+  position: relative;
   &--green {
     background: $green;
+  }
+  &--darkgreen {
+    background: $darkgreen;
   }
 }
 
@@ -92,6 +100,14 @@ body {
 
 .accent--dark {
   color: $darkgreen;
+}
+
+.alert {
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
 }
 
 #flash-message {

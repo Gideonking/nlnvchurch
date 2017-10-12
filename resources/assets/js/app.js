@@ -56,8 +56,8 @@ $(function() {
   if ($('.slider').length > 0) {
     $('.slider').slick({
       fade: true,
-      nextArrow: '<a class="events-arrow events-arrow--next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>',
-      prevArrow: '<a class="events-arrow events-arrow--prev" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>'
+      nextArrow: '<a class="events-arrow events-arrow--next" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>',
+      prevArrow: '<a class="events-arrow events-arrow--prev" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>'
     });
   }
 });

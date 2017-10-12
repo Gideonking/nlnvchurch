@@ -59,8 +59,16 @@
   &-card {
     &-container {
       position: relative;
-      top: -300px;
+      margin-top: -300px;
       text-align: center;
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
     }
     &--service {
       h2 {
@@ -82,7 +90,7 @@
       }
     }
     &--events {
-      margin-top: 8rem;
+      margin-top: 10rem;
       .slick-track {
         height: 500px;
       }
@@ -112,6 +120,7 @@
             font-size: 4rem;
             color: $primary-text;
             margin: 0;
+            max-width: 350px;
           }
           &-desc {
             margin-bottom: 1rem;
@@ -141,7 +150,7 @@
       .events-arrow {
         position: absolute;
         z-index: 2;
-        height: 4rem;
+        height: 6rem;
         top: 0;
         bottom: 0;
         margin: auto;
@@ -149,6 +158,7 @@
         font-size: 4rem;
         line-height: 1;
         color: $darkgreen;
+        padding: 1rem;
         &--next {
           right: 1rem;
         }

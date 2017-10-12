@@ -12,7 +12,7 @@ class WelcomeController extends Controller
 
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAo7ScNH3wxU7P21MtOf2weUTpb0a3SHKA&channelId=UCdmLI5xDRzZmNVAch8HCyGg&part=snippet,id&order=date&maxResults=1'
+        CURLOPT_URL => 'https://www.googleapis.com/youtube/v3/search?key=' . env('GOOGLE_API_KEY') . '&channelId=UCdmLI5xDRzZmNVAch8HCyGg&part=snippet,id&order=date&maxResults=1'
     ));
 
     $res = curl_exec($curl);
