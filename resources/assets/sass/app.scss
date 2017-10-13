@@ -25,6 +25,7 @@ body {
     margin-left: 100px;
     top: -50px;
     opacity: 0;
+    overflow: hidden;
     transition-delay: 0.5s;
     transition-timing-function: ease;
     transition: 0.5s all;
@@ -32,7 +33,6 @@ body {
       position: relative;
       width: 100%;
       height: 100vh;
-      min-height: 950px;
     }
     &:before,
     &:after {
@@ -64,27 +64,38 @@ body.loaded {
     }
     h2 {
       display: inline-block;
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 600;
       color: $primary-text;
       margin: 0;
       line-height: 1;
     }
   }
-  &-link {
+  &-btn {
+    background-color: $darkgreen;
+    color: $secondary-text;
     display: inline-block;
-    color: $green;
-    text-decoration: underline;
-    font-size: 2rem;
-    line-height: 1;
-    vertical-align: baseline;
-    transition: 0.3s color;
-    margin-left: 1rem;
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    transition: 0.3s all;
+    margin-top: 1rem;
+    width: 50%;
+    text-transform: uppercase;
+    box-sizing: border-box;
     &:hover,
     &:focus,
     &:active {
-      color: $darkgreen;
-      text-decoration: underline;
+      text-decoration: none;
+      color: $secondary-text;
+      background-color: darken($darkgreen, 5%);
+    }
+    &-wrapper {
+      display: flex;
+    }
+    &:first-child {
+      margin-right: 1rem;
     }
   }
 }

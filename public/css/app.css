@@ -8524,6 +8524,12 @@ footer small a {
   text-decoration: underline;
 }
 
+footer small a:hover,
+footer small a:focus,
+footer small a:active {
+  color: #ffffff;
+}
+
 .welcome-container {
   background-image: url(/images/nlnv-home-banner.jpg);
   background-size: cover;
@@ -8600,7 +8606,7 @@ footer small a {
 
 .welcome-card-container {
   position: relative;
-  margin-top: -300px;
+  margin-top: -20vh;
   text-align: center;
 }
 
@@ -8615,8 +8621,12 @@ footer small a {
 }
 
 .welcome-card--service h2 {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #222222;
   margin: 0;
-  font-weight: 800;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -8625,7 +8635,7 @@ footer small a {
 }
 
 .welcome-card--join {
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 .welcome-card--join h2 {
@@ -8639,10 +8649,6 @@ footer small a {
   margin-top: 10rem;
 }
 
-.welcome-card--events .slick-track {
-  height: 500px;
-}
-
 .welcome-card--events .slick-slide {
   background-size: cover;
   background-repeat: no-repeat;
@@ -8654,6 +8660,11 @@ footer small a {
 
 .welcome-card--events .slick-slide .events-section {
   height: 100%;
+}
+
+.welcome-card--events .slick-slide .events-section--image,
+.welcome-card--events .slick-slide .events-section--content {
+  height: 400px;
 }
 
 .welcome-card--events .slick-slide .events-section--image {
@@ -8775,9 +8786,16 @@ footer small a {
   text-transform: uppercase;
 }
 
+@media (min-width: 1200px) {
+  .welcome-card--events .slick-slide .events-section--image,
+  .welcome-card--events .slick-slide .events-section--content {
+    height: 500px;
+  }
+}
+
 .connect-container {
   position: relative;
-  height: 700px;
+  height: 500px;
   margin-top: 10rem;
 }
 
@@ -8815,11 +8833,11 @@ footer small a {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(120, 120, 120, 0.6);
 }
 
 .connect-title {
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1;
   position: relative;
   color: #ffffff;
@@ -8857,6 +8875,12 @@ footer small a {
           transform: scale(1.2);
 }
 
+@media (min-width: 1200px) {
+  .connect-container {
+    height: 700px;
+  }
+}
+
 html,
 body {
   font-family: 'Raleway', 'Helvetica', sans-serif;
@@ -8868,6 +8892,7 @@ body {
   margin-left: 100px;
   top: -50px;
   opacity: 0;
+  overflow: hidden;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
   -webkit-transition-timing-function: ease;
@@ -8880,7 +8905,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 950px;
 }
 
 .nlnv-container:before,
@@ -8919,30 +8943,46 @@ body.loaded .nlnv-container {
 
 .card-title h2 {
   display: inline-block;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
   color: #222222;
   margin: 0;
   line-height: 1;
 }
 
-.card-link {
+.card-btn {
+  background-color: #518F51;
+  color: #ffffff;
   display: inline-block;
-  color: #86BA86;
-  text-decoration: underline;
-  font-size: 2rem;
-  line-height: 1;
-  vertical-align: baseline;
-  -webkit-transition: 0.3s color;
-  transition: 0.3s color;
-  margin-left: 1rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin-top: 1rem;
+  width: 50%;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.card-link:hover,
-.card-link:focus,
-.card-link:active {
-  color: #518F51;
-  text-decoration: underline;
+.card-btn:hover,
+.card-btn:focus,
+.card-btn:active {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #487f48;
+}
+
+.card-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-btn:first-child {
+  margin-right: 1rem;
 }
 
 .divider {

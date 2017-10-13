@@ -59,7 +59,7 @@
   &-card {
     &-container {
       position: relative;
-      margin-top: -300px;
+      margin-top: -20vh;
       text-align: center;
       &:before,
       &:after {
@@ -72,8 +72,12 @@
     }
     &--service {
       h2 {
+        display: inline-block;
+        font-size: 4rem;
+        font-weight: 600;
+        color: $primary-text;
         margin: 0;
-        font-weight: 800;
+        line-height: 1;
         text-transform: uppercase;
       }
       p {
@@ -81,7 +85,7 @@
       }
     }
     &--join {
-      margin-top: 1rem;
+      margin-top: 5rem;
       h2 {
         margin: 0;
         font-size: 5rem;
@@ -92,7 +96,7 @@
     &--events {
       margin-top: 10rem;
       .slick-track {
-        height: 500px;
+        // height: 500px;
       }
       .slick-slide {
         background-size: cover;
@@ -103,6 +107,10 @@
         .events {
           &-section {
             height: 100%;
+            &--image,
+            &--content {
+              height: 400px;
+            }
             &--image {
               background-size: cover;
               background-repeat: no-repeat;
@@ -202,5 +210,12 @@
         text-transform: uppercase;
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome-card--events .slick-slide .events-section--image,
+  .welcome-card--events .slick-slide .events-section--content {
+    height: 500px;
   }
 }

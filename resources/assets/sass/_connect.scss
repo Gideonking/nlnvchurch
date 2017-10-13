@@ -1,7 +1,7 @@
 .connect {
   &-container {
     position: relative;
-    height: 700px;
+    height: 500px;
     margin-top: 10rem;
   }
   &-wrapper {
@@ -26,11 +26,11 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.65);
+      background-color: rgba(120, 120, 120, 0.6);
     }
   }
   &-title {
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1;
     position: relative;
     color: $secondary-text;
@@ -54,6 +54,14 @@
     &:active {
       color: $secondary-text;
       transform: scale(1.2);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .connect {
+    &-container {
+      height: 700px;
     }
   }
 }

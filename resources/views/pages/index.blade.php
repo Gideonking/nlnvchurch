@@ -12,15 +12,18 @@
   </div>
 
   <div class="welcome-card-container">
-    <div class="col-sm-5 col-sm-offset-1 card-container welcome-card--video">
+    <div class="col-md-6 col-lg-5 col-lg-offset-1 card-container welcome-card--video">
       <div class="card-title">
         <h2>Latest Sermon</h2>
-        <a class="card-link" href="#">More</a>
       </div>
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ $ytvidid }}?rel=0" frameborder="0" allowfullscreen></iframe>
+      <div class="card-btn-wrapper">
+        <a class="card-btn" href="#">Details</a>
+        <a class="card-btn" href="#">Watch More</a>
+      </div>
     </div>
 
-    <div class="col-sm-5 card-container">
+    <div class="col-md-6 col-lg-5 card-container">
       <div class="welcome-card--service">
         <h2>Service Times</h2>
         <hr class="divider">
@@ -36,14 +39,14 @@
       </div>
     </div>
 
-    <div class="col-sm-10 col-sm-offset-1 card-container welcome-card--events">
+    <div class="col-md-12 col-lg-10 col-lg-offset-1 card-container welcome-card--events">
       <div class="card-title">
         <h2>Events</h2>
       </div>
       <div class="slider">
         <div>
-          <div class="events-section events-section--image col-sm-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
-          <div class="events-section events-section--content col-sm-6">
+          <div class="events-section events-section--image col-md-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
+          <div class="events-section events-section--content col-md-6">
             <h3 class="events-title">NLNV Korean School Begins</h3>
             <hr class="divider divider--darkgreen">
             <div class="events-desc">
@@ -54,8 +57,8 @@
           </div>
         </div>
         <div>
-          <div class="events-section events-section--image col-sm-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
-          <div class="events-section events-section--content col-sm-6">
+          <div class="events-section events-section--image col-md-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
+          <div class="events-section events-section--content col-md-6">
             <h3 class="events-title">NLNV Korean School Begins</h3>
             <hr class="divider divider--darkgreen">
             <div class="events-desc">
@@ -365,10 +368,10 @@
       <h2 class="connect-title">Connect with us</h2>
       <hr class="divider divider--darkgreen">
       <div class="connect-icon-wrapper">
-        <a class="connect-icon" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a class="connect-icon" href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
-        <a class="connect-icon" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a class="connect-icon" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="mailto:nlnvchurch@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="tel:310-991-6544"><i class="fa fa-phone" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="https://www.facebook.com/pages/New-Life-New-Vision-Church/754157684605483" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="connect-icon" href="https://www.youtube.com/channel/UCdmLI5xDRzZmNVAch8HCyGg" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
