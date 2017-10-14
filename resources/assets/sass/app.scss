@@ -1,20 +1,15 @@
-
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Condiment');
-
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
-// Variables
+@import url( 'https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800');
+@import url( 'https://fonts.googleapis.com/css?family=Condiment'); // Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap"; // Variables
 @import "variables";
 @import "nav";
 @import "footer";
 @import "welcome";
 @import "connect";
 
-html,
-body {
+body,
+html {
   font-family: 'Raleway', 'Helvetica', sans-serif;
 }
 
@@ -29,13 +24,15 @@ body {
     transition-delay: 0.5s;
     transition-timing-function: ease;
     transition: 0.5s all;
+
     &--full {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: 800px;
     }
-    &:before,
-    &:after {
+
+    &:after,
+    &:before {
       content: " ";
       display: table;
     }
@@ -54,23 +51,28 @@ body.loaded {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0 30px;
   }
+
   &-title {
     margin: 0;
     text-transform: uppercase;
     text-align: left;
+
     &--secondary {
       background-color: $brown;
     }
+
     h2 {
       display: inline-block;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 600;
       color: $primary-text;
       margin: 0;
       line-height: 1;
     }
   }
+
   &-btn {
     background-color: $darkgreen;
     color: $secondary-text;
@@ -84,16 +86,20 @@ body.loaded {
     width: 50%;
     text-transform: uppercase;
     box-sizing: border-box;
-    &:hover,
+    text-align: center;
+
+    &:active,
     &:focus,
-    &:active {
+    &:hover {
       text-decoration: none;
       color: $secondary-text;
       background-color: darken($darkgreen, 5%);
     }
+
     &-wrapper {
       display: flex;
     }
+
     &:first-child {
       margin-right: 1rem;
     }
@@ -105,13 +111,15 @@ body.loaded {
   height: 4px;
   background: $brown;
   clear: both;
-  margin: 2rem auto 2rem;
+  margin: 2rem auto;
   outline: 0;
   border: 0;
   position: relative;
+
   &--green {
     background: $green;
   }
+
   &--darkgreen {
     background: $darkgreen;
   }
@@ -133,9 +141,116 @@ body.loaded {
   }
 }
 
+.arrow-down {
+  display: none;
+  margin-top: 2rem;
+  width: 30px;
+  max-height: 40px;
+  path {
+    stroke: black;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+    &.a1 {
+      animation-delay: -1s;
+      -webkit-animation-delay: -1s;
+    }
+
+    &.a2 {
+      animation-delay: -0.5s;
+      -webkit-animation-delay: -0.5s;
+    }
+
+    &.a3 {
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 #flash-message {
   position: absolute;
   bottom: 20px;
   right: 20px;
   z-index: 10;
+}
+@media screen and (min-width: 992px) {
+  .nlnv {
+    &-container {
+      &--full {
+        height: 100vh;
+      }
+    }
+  }
+
+  .card {
+    &-container {
+      padding: 0 15px;
+    }
+
+    &-title {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  .nlnv {
+    &-container {
+      width: 100%;
+      margin-left: 0;
+
+      &--full {
+        height: 100vh;
+      }
+    }
+  }
+  svg.arrow-down {
+    display: inline-block;
+  }
+  .card {
+    &-btn {
+      padding: 1.5rem 1rem;
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+/* HELPERS */
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-link {
+    color: currentColor;
+    text-decoration: underline;
+    &:hover {
+      color: currentColor;
+    }
+    &--nounderline {
+      text-decoration: none;
+    }
+  }
 }

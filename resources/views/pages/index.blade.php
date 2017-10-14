@@ -8,6 +8,11 @@
         <span class="welcome-text--bottom">for the <span class="welcome-text-accent">next</span> generation</span>
         <span class="welcome-text--sub">New Life New Vision Church</span>
       </h1>
+      <svg class="arrow-down">
+        <path class="a1" d="M0 0 L15 16 L30 0"></path>
+        <path class="a2" d="M0 10 L15 26 L30 10"></path>
+        <path class="a3" d="M0 20 L15 36 L30 20"></path>
+      </svg>
     </div>
   </div>
 
@@ -57,13 +62,13 @@
           </div>
         </div>
         <div>
-          <div class="events-section events-section--image col-md-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
+          <div class="events-section events-section--image col-md-6" style="background-image: url(/images/events/homeless-ministry.jpg);"></div>
           <div class="events-section events-section--content col-md-6">
-            <h3 class="events-title">NLNV Korean School Begins</h3>
+            <h3 class="events-title">Homeless Ministry</h3>
             <hr class="divider divider--darkgreen">
             <div class="events-desc">
-              <p>9.23.2017</p>
-              <p>Every Saturday 9:30AM - 11:30AM</p>
+              <p>To reach the homeless men and women in our community and share with them the love of God.</p>
+              <p></p>
             </div>
             <a class="events-btn" href="#">LEARN MORE</a>
           </div>

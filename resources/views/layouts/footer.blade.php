@@ -1,6 +1,6 @@
-<footer>
-  <p>Copyright © {{ date('Y') }} New Life New Vision Church.<p>
-  <small>Designed/Developed by <a href="http://github.com/scrumptiousdev" target="_blank">ScrumptiousDev</a></small>
+<footer class="footer">
+  <p class="footer__copyright">Copyright © {{ date('Y') }} New Life New Vision Church<p>
+  <small class="footer__credit">Designed/Developed by <a class="text-link" href="http://github.com/scrumptiousdev" target="_blank">ScrumptiousDev</a></small>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

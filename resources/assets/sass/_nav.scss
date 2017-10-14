@@ -128,3 +128,14 @@ body.loaded {
     }
   }
 }
+
+@media screen and (max-width: 414px) {
+  .nav {
+    left: -120px;
+  }
+  body.loaded {
+    .nav {
+      left: -120px;
+    }
+  }
+}

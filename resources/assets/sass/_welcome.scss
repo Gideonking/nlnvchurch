@@ -20,6 +20,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       width: 100%;
       height: 100%;
       text-align: center;
@@ -33,7 +34,7 @@
     &--top,
     &--bottom {
       font-family: 'Condiment', sans-serif;
-      font-size: 4rem;
+      font-size: 3rem;
     }
     &--sub {
       font-weight: 400;
@@ -42,11 +43,11 @@
     }
     &--top {
       top: -3rem;
-      left: -8rem;
+      left: -6rem;
     }
     &--bottom {
       top: -7rem;
-      left: 14rem;
+      left: 12rem;
     }
     &--sub {
       top: -6rem;
@@ -69,6 +70,9 @@
       &:after {
         clear: both;
       }
+    }
+    &--video {
+      margin-bottom: 8rem;
     }
     &--service {
       h2 {
@@ -95,9 +99,6 @@
     }
     &--events {
       margin-top: 10rem;
-      .slick-track {
-        // height: 500px;
-      }
       .slick-slide {
         background-size: cover;
         background-repeat: no-repeat;
@@ -122,6 +123,7 @@
               justify-content: center;
               align-items: center;
               flex-direction: column;
+              padding: 0 4rem;
             }
           }
           &-title {
@@ -142,7 +144,7 @@
             padding: 1rem 4rem;
             border: 1px solid $darkgrey;
             font-size: 1.5rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 5px;
             transition: 0.3s all;
             &:hover,
@@ -158,20 +160,19 @@
       .events-arrow {
         position: absolute;
         z-index: 2;
-        height: 6rem;
-        top: 0;
         bottom: 0;
         margin: auto;
         font-weight: 800;
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: 1;
-        color: $darkgreen;
-        padding: 1rem;
+        background-color: $darkgreen;
+        color: $offwhite;
+        padding: 1rem 2rem;
         &--next {
-          right: 1rem;
+          right: 0;
         }
         &--prev {
-          left: 1rem;
+          right: 5.25rem;
         }
       }
     }
@@ -213,9 +214,76 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .welcome-card--events .slick-slide .events-section--image,
   .welcome-card--events .slick-slide .events-section--content {
     height: 500px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .welcome {
+    &-text {
+      &--top,
+      &--bottom {
+        font-size: 4rem;
+      }
+      &--top {
+        left: -8rem;
+      }
+      &--bottom {
+        left: 14rem;
+      }
+    }
+    &-card {
+      &--video {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .welcome {
+    &-card {
+      &-container {
+        margin-top: 4rem;
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      &--events {
+        .slick-slide {
+          .events {
+            &-section {
+              &--image {
+                height: 250px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-text {
+      &--top,
+      &--bottom {
+        font-size: 2rem;
+      }
+      &--top {
+        top: 0;
+        left: -4rem;
+      }
+      &--bottom {
+        top: -2rem;
+        left: 8rem;
+      }
+      &-accent {
+        font-size: 5rem;
+      }
+      &--sub {
+        font-size: 1.25rem;
+        top: 0;
+      }
+    }
   }
 }
