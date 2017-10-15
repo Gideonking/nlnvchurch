@@ -1,10 +1,9 @@
 .connect {
-  &-container {
+  &__container {
     position: relative;
     height: 500px;
-    margin-top: 10rem;
   }
-  &-wrapper {
+  &__wrapper {
     height: 100%;
     background-image: url(/images/subscription-bg.jpg);
     background-size: cover;
@@ -15,6 +14,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: $secondary-text;
     & > * {
       position: relative;
     }
@@ -29,17 +29,7 @@
       background-color: rgba(120, 120, 120, 0.6);
     }
   }
-  &-title {
-    font-weight: 300;
-    line-height: 1;
-    position: relative;
-    color: $secondary-text;
-    z-index: 2;
-    text-align: center;
-    font-size: 5rem;
-    margin-bottom: 0;
-  }
-  &-icon {
+  &__icon {
     color: $secondary-text;
     font-size: 4rem;
     transition: 0.3s transform;
@@ -49,9 +39,7 @@
       width: 80%;
       max-width: 300px;
     }
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       color: $secondary-text;
       transform: scale(1.2);
     }
@@ -60,7 +48,7 @@
 
 @media (min-width: 1200px) {
   .connect {
-    &-container {
+    &__container {
       height: 700px;
     }
   }

@@ -1,0 +1,121 @@
+body,
+html {
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  line-height: normal;
+}
+
+.nlnv {
+  &__container {
+    position: relative;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    top: -50px;
+    opacity: 0;
+    overflow: hidden;
+    transition-delay: 0.5s;
+    transition-timing-function: ease;
+    transition: 0.5s all;
+  }
+  &__heading {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+body.loaded {
+  .nlnv__container {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .nlnv {
+    &__container {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  svg.arrow-down {
+    display: inline-block;
+  }
+}
+
+/* HELPERS */
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-link {
+    color: currentColor;
+    text-decoration: underline;
+    &:hover {
+      color: currentColor;
+    }
+    &--nounderline {
+      text-decoration: none;
+    }
+  }
+}
+
+.divider {
+  width: 78px;
+  height: 4px;
+  background: $white;
+  clear: both;
+  margin: 2rem auto;
+  outline: 0;
+  border: 0;
+  position: relative;
+
+  &--gold {
+    background: $gold;
+  }
+
+  &--blue {
+    background: $blue;
+  }
+
+  &--green {
+    background: $green;
+  }
+
+  &--darkgreen {
+    background: $darkgreen;
+  }
+
+  &--margin-b-lg {
+    margin-bottom: 4rem;
+  }
+}
+
+.accent {
+  &--light {
+    color: $green;
+  }
+  &--dark {
+    color: $darkgreen;
+  }
+}
+
+#flash-message {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.alert {
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+}

@@ -21,7 +21,7 @@
   <body>
     @include('layouts.nav')
 
-    <div class="nlnv-container">
+    <div class="nlnv__container">
       @yield('content')
       @include('layouts.footer')
     </div>

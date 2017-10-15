@@ -1,15 +1,23 @@
 // Colors
-$green: #86BA86;
-$darkgreen: #518F51;
-$brown: #77472F;
+$green: #00C28C;
+$darkgreen: #009B70;
 $white: #ffffff;
 $offwhite: #f1f4f5;
-$darkgrey: #222222;
+$darkgrey: #333333;
+$grey: #666666;
 $lightgrey: #e5ecef;
+$blue: #1E344D;
+$gold: #FFEBB2;
+$black: #000000;
+$orange: #FF7860;
+$transparent: rgba(255, 255, 255, 0);
 
 // Texts
 $primary-text: $darkgrey;
 $secondary-text: $white;
+$tertiary-text: $green;
 
 // Backgrounds
 $primary-bg: $white;
+$secondary-bg: $blue;
+$tertiary-bg: $darkgrey;

@@ -1,0 +1,269 @@
+.home__banner {
+  position: fixed;
+  background-image: url("/images/nlnv-home-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: calc(100% - 100px);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  &-text {
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    &--bottom,
+    &--top {
+      position: relative;
+      display: block;
+      font-size: 3rem;
+      font-weight: 200;
+    }
+
+    &--sub {
+      position: relative;
+      display: block;
+      letter-spacing: 5px;
+      font-weight: 100;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background-color: $darkgreen;
+      color: $secondary-text;
+    }
+
+    &--accent {
+      font-size: 6rem;
+    }
+  }
+}
+
+.home__container {
+  position: relative;
+  padding: 12rem 0;
+  background-color: $primary-bg;
+  &--blue {
+    background-color: $secondary-bg;
+    color: $secondary-text;
+  }
+  &--dark {
+    background-color: $tertiary-bg;
+    color: $secondary-text;
+  }
+}
+
+.home__service {
+  margin-top: 100vh;
+  position: relative;
+  background-image: url("/images/nlnv-home-join.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $secondary-text;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  &-title {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &-times {
+    font-size: 1.75rem;
+    font-weight: 200;
+  }
+}
+
+.home__join {
+  margin-top: 5rem;
+  padding: 2rem;
+  border: 5px solid $white;
+  max-width: 500px;
+  margin: 2rem auto 0;
+
+  &-title {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &-time {
+    margin: 0;
+    font-size: 3.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &-label {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    word-spacing: 14px;
+  }
+
+  &-for {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.home__message {
+  &-title {
+    margin: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 400;
+    color: $primary-text;
+    margin: 0;
+    line-height: 1;
+  }
+  &-btn {
+    background-color: $transparent;
+    color: $tertiary-text;
+    display: inline-block;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    transition: 0.3s all;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid $tertiary-text;
+    float: right;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $secondary-text;
+      background-color: $tertiary-text;
+    }
+  }
+  &-desc {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home__banner-text {
+    &--bottom,
+    &--top {
+      font-size: 3.5rem;
+    }
+
+    &--top {
+      top: -4rem;
+    }
+
+    &--bottom {
+      top: -6rem;
+    }
+
+    &--sub {
+      top: -5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .home__banner-text {
+    &--bottom,
+    &--top {
+      font-size: 2rem;
+    }
+
+    &--top {
+    }
+
+    &--bottom {
+    }
+
+    &--accent {
+      font-size: 5rem;
+    }
+
+    &--sub {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+//
+// .welcome {
+//   &-map {
+//     height: 100%;
+//
+//     &-container {
+//       height: 500px;
+//     }
+//
+//     &-direction {
+//       padding: 2rem 1rem 1rem;
+//
+//       a {
+//         color: $darkgreen;
+//         font-size: 1.5rem;
+//         text-transform: uppercase;
+//       }
+//     }
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//
+// }
+// @media screen and (min-width: 992px) {
+//
+// }
+// @media screen and (max-width: 414px) {
+//
+// }

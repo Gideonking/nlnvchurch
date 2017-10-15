@@ -13,9 +13,9 @@
     <i class="nav__icon fa fa-pagelines" aria-hidden="true"></i>
     <p class="nav__text">About</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'sermons') echo 'active'; ?>" href="/sermons">
+  <a class="nav__link <?php if($active_page === 'messages') echo 'active'; ?>" href="/messages">
     <i class="nav__icon fa fa-quote-right" aria-hidden="true"></i>
-    <p class="nav__text">Sermons</p>
+    <p class="nav__text">Messages</p>
   </a>
   <a class="nav__link <?php if($active_page === 'news') echo 'active'; ?>" href="/news">
     <i class="nav__icon fa fa-bullhorn" aria-hidden="true"></i>

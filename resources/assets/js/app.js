@@ -21,7 +21,7 @@ Vue.component('example', require('./components/Example.vue'));
 // });
 
 $(function() {
-  if ($('.welcome-join-time').length > 0) {
+  if ($('.home__join-time').length > 0) {
     var today = new Date(),
         sunday = new Date();
 
@@ -43,7 +43,7 @@ $(function() {
           minutes = addZero(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))),
           seconds = addZero(Math.floor((distance % (1000 * 60)) / 1000));
 
-      $('.welcome-join-time').text(days + ":" + hours + ":" + minutes + ":" + seconds);
+      $('.home__join-time').text(days + ":" + hours + ":" + minutes + ":" + seconds);
     }, 1000);
   }
 
@@ -53,13 +53,12 @@ $(function() {
     }, 2000);
   }
 
-  if ($('.slider').length > 0) {
-    $('.slider').slick({
-      fade: true,
-      nextArrow: '<a class="events-arrow events-arrow--next" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>',
-      prevArrow: '<a class="events-arrow events-arrow--prev" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>'
-    });
-  }
+  $('.card__container').hover(function() {
+    $(this).find('.card__description').stop().animate({
+      height: "toggle",
+      opacity: "toggle"
+    }, 300);
+  });
 
   enter();
 
