@@ -21,6 +21,13 @@ Vue.component('example', require('./components/Example.vue'));
 // });
 
 $(function() {
+  mediaCheck({
+    media: '(max-width: 414px)',
+    exit: function() {
+      $('.opened').removeClass('opened');
+    }
+  });
+
   if ($('.home__join-time').length > 0) {
     var today = new Date(),
         sunday = new Date();
@@ -53,25 +60,59 @@ $(function() {
     }, 2000);
   }
 
-  $('.card__container').hover(function() {
-    $(this).find('.card__description').stop().animate({
-      height: "toggle",
-      opacity: "toggle"
-    }, 300);
-  });
+  if ($('.card__container').length > 0) {
+    var cardHover = true;
+
+    $('.card__container').hover(function() {
+      if (cardHover) {
+        $(this).find('.card__description').stop().animate({
+          height: "toggle",
+          opacity: "toggle"
+        }, 300);
+      }
+    });
+
+    mediaCheck({
+      media: '(max-width: 768px)',
+      entry: function() {
+        cardHover = false;
+      },
+      exit: function() {
+        cardHover = true;
+      }
+    });
+  }
 
   enter();
+
+  $('body').on('click', '.nav__link-mobile, .nav__overlay', function(e) {
+    e.preventDefault();
+
+    $('.nav').toggleClass('opened');
+    $('.nav__overlay').toggleClass('opened');
+  });
 
   $('body').on('click', '.nav__link', function(e) {
     var that = this;
 
     e.preventDefault();
-    if ($(this).hasClass('active')) return false;
+    if ($(this).hasClass('active') || $(this).hasClass('nav__link-mobile')) return false;
 
     exit();
 
     setTimeout(function() {
       location.href = $(that).attr('href');
+    }, 500);
+  });
+
+  $('body').on('click', '.js-scroll', function(e) {
+    e.preventDefault();
+
+    var scrollTo = $(this).attr('href'),
+        target = (scrollTo !== '' && scrollTo !== '#') ? $(scrollTo).offset().top : 0;
+
+    $('html, body').animate({
+      scrollTop: target
     }, 500);
   });
 });

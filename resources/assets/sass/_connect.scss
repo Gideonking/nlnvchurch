@@ -47,9 +47,21 @@
 }
 
 @media (min-width: 1200px) {
+  .connect__container {
+    height: 700px;
+  }
+}
+
+@media (max-width: 414px) {
   .connect {
     &__container {
-      height: 700px;
+      height: 300px;
+    }
+    &__icon {
+      font-size: 3rem;
+      &-wrapper {
+        max-width: 250px;
+      }
     }
   }
 }

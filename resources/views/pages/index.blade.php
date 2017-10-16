@@ -4,20 +4,20 @@
   <div class="home__banner">
     <div class="home__banner-text-container">
       <h1 class="home__banner-text">
-        <span class="home__banner-text--top">A church that <span class="home__banner-text--accent">plants</span> churches</span>
-        <span class="home__banner-text--bottom">for the <span class="home__banner-text--accent">next</span> generation</span>
-        <span class="home__banner-text--sub">New Life New Vision Church</span>
+        <span class="home__banner-text--sub kor-sub">다음 세대를 위해 교회를 개척하는 교회</span>
+        <span class="home__banner-text--main">New Life<span class="break-414"> </span>New Vision<span class="break-414"> </span>Church</span>
       </h1>
+      <a class="home__banner-arrow js-scroll" href="#first"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
     </div>
   </div>
 
-  <div class="home__container home__service clearfix">
+  <div id="first" class="home__container home__service clearfix">
     <div class="col-lg-8 col-lg-offset-2 text-center">
-      <h2 class="nlnv__heading">Service Times</h2>
+      <h2 class="nlnv__heading kor-main">예배 안내</h2>
       <hr class="divider divider--green">
-      <p class="home__service-times"><b>Sunday Service:</b> 10:00AM &amp; 12:00PM</p>
-      <p class="home__service-times"><b>Wednesday Prayer:</b> 6:30PM</p>
-      <p class="home__service-times"><b>Weekday Prayer:</b> 5:30AM (Tue-Fri) &amp; 6:30AM (Sat)</p>
+      <p class="home__service-times kor-main"><b>주일예배:</b> 10:00AM (1부) &amp; 12:00PM (2부)</p>
+      <p class="home__service-times kor-main"><b>수요기도회:</b> 6:30PM</p>
+      <p class="home__service-times kor-main"><b>새벽기도회:</b> 5:30AM (화-금) &amp; 6:30AM (토)</p>
       <div class="home__join">
         <h2 class="home__join-title">Come <span class="accent--light">Join</span> Us!</h2>
         <h3 class="home__join-time"></h3>
@@ -28,13 +28,13 @@
   </div>
 
   <div class="home__container home__message clearfix">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h2 class="home__message-title">Latest Messages</h2>
+    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <h2 class="home__message-title">주일 설교영상</h2>
       <a class="home__message-btn" href="#">Watch More</a>
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvidid }}?rel=0" frameborder="0" allowfullscreen></iframe>
+      <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvidid }}?rel=0" frameborder="0" allowfullscreen></iframe>
       <hr class="divider divider--green">
-      <div class="home__message-desc text-center">
-        <p>Series "The Fruit of the Spirit" - Love</p>
+      <div class="home__message-desc text-center kor-main">
+        <p>성령의 열매 시리즈 #1 - 사랑</p>
         <p>October 8, 2017</p>
         <p>Pastor Peter Choi</p>
       </div>
@@ -42,62 +42,62 @@
   </div>
 
   <div class="home__container home__container--blue clearfix">
-    <div class="col-lg-10 col-lg-offset-1 text-center">
-      <h2 class="nlnv__heading">Events</h2>
+    <div class="col-md-12 col-lg-10 col-lg-offset-1 text-center">
+      <h2 class="nlnv__heading">교회 행사</h2>
       <hr class="divider divider--gold divider--margin-b-lg">
       {{-- Single Event Card 1 --}}
-      <div class="col-lg-4">
+      <div class="card__col col-sm-6 col-md-4">
         <div class="card__container">
           <div class="card__thumbnail">
             <div class="card__image" style="background-image: url(images/events/korean-school.jpg);"></div>
           </div>
           <div class="card__content">
             <div class="card__category">9.23.2017</div>
-            <h1 class="card__title">NLNV Korean School</h1>
+            <h1 class="card__title kor-main">NLNV 한글학교</h1>
             <h2 class="card__subtitle">Fall 2017 Class Begins!</h2>
             <div class="card__description">
-              <p>Every Saturday 9:30AM - 11:30AM</p>
+              <p class="kor-main">매주 토요일 9:30AM - 11:30AM</p>
             </div>
             <div class="card__cta">
-              <a class="text-link" href="#">View Detail</a>
+              <a class="card__btn kor-main" href="#">자세히보기</a>
             </div>
           </div>
         </div>
       </div>
       {{-- Single Event Card 2 --}}
-      <div class="col-lg-4">
+      <div class="card__col col-sm-6 col-md-4">
         <div class="card__container">
           <div class="card__thumbnail">
             <div class="card__image" style="background-image: url(images/events/homeless-ministry.jpg);"></div>
           </div>
           <div class="card__content">
             <div class="card__category">Daily</div>
-            <h1 class="card__title">Homeless Ministry</h1>
+            <h1 class="card__title kor-main">홈리스 사역</h1>
             <h2 class="card__subtitle">Share the love of God.</h2>
             <div class="card__description">
-              <p>To reach the homeless men and women in our community and share with them the love of God.</p>
+              <p class="kor-main">홈리스 사역은 홈리스들의 영적인 갈급함을 풀어줌으로 인하여 그들의 삶의 목적이 바뀌어 세상에 빛과 소금과 같은 존재로 바뀔 수 있도록 도와주는 사역입니다.</p>
             </div>
             <div class="card__cta">
-              <a class="text-link" href="#">View Detail</a>
+              <a class="card__btn kor-main" href="#">자세히보기</a>
             </div>
           </div>
         </div>
       </div>
       {{-- Single Event Card 3 --}}
-      <div class="col-lg-4">
+      <div class="card__col col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
         <div class="card__container">
           <div class="card__thumbnail">
             <div class="card__image" style="background-image: url(images/events/read-bible.jpg);"></div>
           </div>
           <div class="card__content">
             <div class="card__category">Daily</div>
-            <h1 class="card__title">Daily Bible Reading</h1>
+            <h1 class="card__title kor-main">함께 성경읽기</h1>
             <h2 class="card__subtitle">Read the word of God.</h2>
             <div class="card__description">
-              <p>Daily encouragement from God's word by reading 3 chapters per day.</p>
+              <p class="kor-main">매일 하루에 3장씩 성경을 읽으므로 하나님의 말씀을 사모합시다.</p>
             </div>
             <div class="card__cta">
-              <a class="text-link" href="#">View Detail</a>
+              <a class="card__btn kor-main" href="#">자세히보기</a>
             </div>
           </div>
         </div>

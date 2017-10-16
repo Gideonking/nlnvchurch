@@ -4,11 +4,19 @@ html {
   line-height: normal;
 }
 
+*.kor-main {
+  font-family: 'Nanum Gothic', serif;
+}
+
+*.kor-sub {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
 .nlnv {
   &__container {
     position: relative;
-    width: calc(100% - 100px);
-    margin-left: 100px;
+    width: calc(100% - #{$nav-width});
+    margin-left: $nav-width;
     top: -50px;
     opacity: 0;
     overflow: hidden;
@@ -39,9 +47,18 @@ body.loaded {
       width: 100%;
       margin-left: 0;
     }
+    &__heading {
+      font-size: 3rem;
+    }
   }
   svg.arrow-down {
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nlnv__heading {
+    font-size: 2.5rem;
   }
 }
 
@@ -102,6 +119,14 @@ body.loaded {
   }
   &--dark {
     color: $darkgreen;
+  }
+}
+
+.break {
+  &-414 {
+    @media screen and (max-width: 414px) {
+      display: block;
+    }
   }
 }
 

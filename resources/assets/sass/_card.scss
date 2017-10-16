@@ -5,6 +5,7 @@
     display: block;
     background: $primary-bg;
     height: 470px;
+    margin-bottom: 2rem;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
     transition: all 0.3s linear 0s;
     &:hover {
@@ -62,6 +63,27 @@
     font-size: 1.75rem;
     font-weight: 400;
   }
+  &__btn {
+    background-color: $transparent;
+    color: $orange;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.35rem;
+    font-weight: 400;
+    transition: 0.3s all;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid $orange;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $secondary-text;
+      background-color: $orange;
+    }
+  }
   &__description {
     display: none;
     color: $grey;
@@ -74,5 +96,80 @@
   &__cta {
     margin: 30px 0 0;
     color: $grey;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card__container:hover .card__image {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .card {
+    &__col {
+      width: 100%;
+      margin: auto;
+    }
+    &__container {
+      height: 285px;
+      &:hover .card__image {
+        transform: none;
+        opacity: 1;
+      }
+    }
+    &__thumbnail,
+    &__content {
+      width: 50%;
+    }
+    &__content {
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__category {
+      top: 0;
+      left: -100%;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .card {
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__category {
+      top: -38px;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    &__container {
+      height: 350px;
+    }
+    &__thumbnail {
+      height: 250px;
+    }
+    &__title {
+      font-size: 2.25rem;
+    }
+    &__category {
+      top: -38px;
+    }
+    &__subtitle {
+      font-size: 1.25rem;
+    }
+    &__cta {
+      margin-top: 15px;
+    }
   }
 }

@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  width: calc(100% - 100px);
+  width: calc(100% - #{$nav-width});
 
   &:before {
     position: absolute;
@@ -28,15 +28,7 @@
       text-align: center;
     }
 
-    &--bottom,
-    &--top {
-      position: relative;
-      display: block;
-      font-size: 3rem;
-      font-weight: 200;
-    }
-
-    &--sub {
+    &--main {
       position: relative;
       display: block;
       letter-spacing: 5px;
@@ -48,8 +40,24 @@
       color: $secondary-text;
     }
 
-    &--accent {
-      font-size: 6rem;
+    &--sub {
+      position: relative;
+      display: block;
+      font-size: 2rem;
+      font-weight: 200;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-arrow {
+    display: none;
+    font-size: 6rem;
+    color: $darkgreen;
+    z-index: 1;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $darkgreen;
     }
   }
 }
@@ -76,6 +84,7 @@
   background-repeat: no-repeat;
   background-position: center;
   color: $secondary-text;
+
   &:before {
     content: '';
     display: block;
@@ -84,15 +93,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-  &-title {
-    display: inline-block;
-    font-size: 4rem;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1;
-    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   &-times {
@@ -114,6 +115,7 @@
     font-weight: 800;
     text-transform: uppercase;
   }
+
   &-time {
     margin: 0;
     font-size: 3.7rem;
@@ -153,7 +155,7 @@
     color: $tertiary-text;
     display: inline-block;
     padding: 1.5rem 2.5rem;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 400;
     letter-spacing: 5px;
     transition: 0.3s all;
@@ -173,50 +175,112 @@
     }
   }
   &-desc {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .home__banner-text {
-    &--bottom,
-    &--top {
-      font-size: 3.5rem;
-    }
-
-    &--top {
-      top: -4rem;
-    }
-
-    &--bottom {
-      top: -6rem;
-    }
-
-    &--sub {
-      top: -5rem;
-    }
+@media screen and (max-width: 768px) {
+  .home__banner-arrow {
+    display: block;
+  }
+  .home__message-iframe {
+    height: 400px;
   }
 }
 
 @media screen and (max-width: 414px) {
-  .home__banner-text {
-    &--bottom,
-    &--top {
-      font-size: 2rem;
+  .home__container {
+    padding: 8rem 0;
+  }
+
+  .home__banner {
+    width: 100%;
+
+    &-text {
+      &--main {
+        background-color: $transparent;
+        border: 3px solid $darkgreen;
+        color: $darkgreen;
+        font-weight: 300;
+      }
+
+      &--sub {
+        font-size: 1.5rem;
+      }
     }
 
-    &--top {
+    &-arrow {
+      font-size: 4rem;
+    }
+  }
+
+  .home__service-times {
+    font-size: 1.5rem;
+  }
+
+  .home__join {
+    &-title {
+      font-size: 4rem;
     }
 
-    &--bottom {
+    &-for {
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
+
+  .home__message {
+    &-title {
+      font-size: 3rem;
     }
 
-    &--accent {
-      font-size: 5rem;
-    }
-
-    &--sub {
+    &-btn {
+      padding: 1.5rem 1rem;
       font-size: 1.25rem;
+    }
+
+    &-desc {
+      font-size: 1.5rem;
+    }
+
+    &-iframe {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .home__service-times {
+    font-size: 1.25rem;
+  }
+
+  .home__join {
+    &-title {
+      font-size: 3rem;
+    }
+
+    &-for {
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+  }
+
+  .home__message {
+    &-title {
+      font-size: 2.25rem;
+    }
+
+    &-btn {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    &-desc {
+      font-size: 1.25rem;
+    }
+
+    &-iframe {
+      height: 200px;
     }
   }
 }

@@ -5,20 +5,30 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 100px;
+  width: $nav-width;
   box-shadow: 2px 0px 5px 1px rgba(0,0,0,0.25);
   z-index: 10;
   opacity: 0;
   left: -20px;
   transition: 0.5s all;
   transition-timing-function: ease;
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 5;
+  }
   &__link {
     position: relative;
     display: block;
     text-decoration: none;
     color: $primary-text;
     text-align: center;
-    padding: 1em;
+    padding: 1.3rem;
     border-bottom: 1px solid $lightgrey;
     &.active {
       cursor: no-drop;
@@ -67,13 +77,29 @@
         }
       }
     }
+    &-mobile {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: $nav-width;
+      border: none;
+      background-color: $darkgreen;
+      font-size: 3rem;
+      padding: 1rem 1.5rem !important;
+      color: $secondary-text;
+      &:hover,
+      &:active,
+      &focus {
+        color: $secondary-text;
+      }
+    }
   }
   & .nav__icon {
     font-size: 2.5rem;
   }
   &__text {
     color: $primary-text;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin: 0.5rem 0 0;
     font-weight: 500;
     text-transform: uppercase;
@@ -125,11 +151,47 @@ body.loaded {
 
 @media screen and (max-width: 414px) {
   .nav {
-    left: -120px;
+    left: -$nav-width;
+    box-shadow: none;
+
+    &__link-mobile {
+      display: block;
+    }
   }
   body.loaded {
     .nav {
-      left: -120px;
+      left: -$nav-width;
+      &.opened {
+        left: 0;
+      }
+      &__overlay.opened {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav {
+    &__link {
+      padding: 1rem;
+      &-logo {
+        padding: 1.5rem 1rem;
+        .nav__text {
+          font-size: 2.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav {
+    &__link {
+      padding: 1.5rem 1rem;
+    }
+    &__icon.fa {
+      display: none;
     }
   }
 }
