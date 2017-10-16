@@ -8379,6 +8379,16 @@ html {
   transition: 0.5s all;
 }
 
+.nlnv__container--blue {
+  background-color: #1E344D;
+  color: #ffffff;
+}
+
+.nlnv__container--dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 .nlnv__heading {
   display: inline-block;
   font-size: 4rem;
@@ -9043,6 +9053,80 @@ body.loaded .nav {
   }
 }
 
+.directions__banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("/images/nlnv-directions-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  color: #ffffff;
+}
+
+.directions__banner:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.directions__banner * {
+  position: relative;
+}
+
+.directions__list-container {
+  padding: 12rem 0;
+}
+
+.directions__map {
+  height: 100%;
+}
+
+.directions__map-container {
+  height: 500px;
+}
+
+.footer {
+  position: relative;
+  background-color: #009B70;
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 2rem;
+  font-weight: 200;
+}
+
+.footer__copyright {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.footer__credit {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__copyright {
+    font-size: 1.25rem;
+  }
+}
+
 .connect__container {
   position: relative;
   height: 500px;
@@ -9339,31 +9423,6 @@ body.loaded .nav {
 
   .card__cta {
     margin-top: 15px;
-  }
-}
-
-.footer {
-  position: relative;
-  background-color: #009B70;
-  color: #ffffff;
-  text-align: center;
-  padding: 3rem 2rem;
-  font-weight: 200;
-}
-
-.footer__copyright {
-  margin-bottom: 0;
-  font-size: 1.5rem;
-}
-
-.footer__credit {
-  font-weight: 100;
-  font-size: 1rem;
-}
-
-@media screen and (max-width: 320px) {
-  .footer__copyright {
-    font-size: 1.25rem;
   }
 }
 

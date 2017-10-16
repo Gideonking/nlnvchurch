@@ -2,15 +2,38 @@
 
 @section('content')
 
-<div class="col-sm-10 col-sm-offset-1 welcome-map-container">
-  <div class="welcome-map"></div>
+<div class="directions__banner">
+  <h1 class="nlnv__heading kor-main">찾아오시는 길</h1>
+  <hr class="divider divider--green">
+  <p>2472 Walnut Ave, Tustin, CA 92780</p>
+  <p>(310) 991-6544</p>
+
+  <div class="col-lg-4">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control directions__input-from kor-main" placeholder="출발지 주소" aria-label="출발지 주소">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary directions__find-btn kor-main" type="button">길찾기</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="row directions__list-container">
+  <div class="directions__list col-md-6 col-md-offset-3"></div>
+</div>
+
+<div class="directions__map-container">
+  <div class="directions__map"></div>
   <script>
     var geocoder;
     var map;
-    var address ="2472 Walnut Ave, Tustin, CA 92780";
+    var address = "2472 Walnut Ave, Tustin, CA 92780";
 
     function initMap() {
       geocoder = new google.maps.Geocoder();
+      var marker;
+      var directionsDisplay = new google.maps.DirectionsRenderer;
+      var directionsService = new google.maps.DirectionsService;
       var latlng = new google.maps.LatLng(33.7179887, -117.8096948,21),
           myOptions = {
             zoom: 14,
@@ -20,7 +43,7 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
 
-      map = new google.maps.Map(document.getElementsByClassName("welcome-map")[0], myOptions);
+      map = new google.maps.Map(document.getElementsByClassName("directions__map")[0], myOptions);
 
       if (geocoder) {
         geocoder.geocode({ 'address': address }, function(results, status) {
@@ -28,12 +51,7 @@
             if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
               map.setCenter(results[0].geometry.location);
 
-              var infowindow = new google.maps.InfoWindow({
-                content: '<div class="welcome-map-direction"><a href="https://www.google.com/maps/dir/New+Life+New+Vision+Church,+2472+Walnut+Ave,+Tustin,+CA+92780" target="_blank">Get Directions</a></div>',
-                size: new google.maps.Size(150,50)
-              });
-
-              var marker = new google.maps.Marker({
+              marker = new google.maps.Marker({
                 position: results[0].geometry.location,
                 map: map,
                 title: 'New Life New Vision Church'
@@ -275,18 +293,42 @@
               ]
               );
 
-              google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map, marker);
-              });
-
-              infowindow.open(map, marker);
               map.mapTypes.set('styled_map', styledMapType);
               map.setMapTypeId('styled_map');
             }
           }
         });
       }
+
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementsByClassName('directions__list')[0]);
+      var onChangeHandler = function() {
+        calculateAndDisplayRoute(directionsService, directionsDisplay, marker);
+      };
+
+      document.getElementsByClassName('directions__find-btn')[0].addEventListener('click', onChangeHandler);
     }
+
+    function calculateAndDisplayRoute(directionsService, directionsDisplay, currentMarker) {
+        var start = document.getElementsByClassName('directions__input-from')[0].value,
+            end = "2472 Walnut Ave, Tustin, CA 92780";
+
+        start = (start !== '') ? start : end;
+
+        directionsService.route({
+          origin: start,
+          destination: end,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            currentMarker.setMap(null);
+            directionsDisplay.setDirections(response);
+            console.log(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initMap" async defer></script>
 </div>

@@ -23,6 +23,9 @@
 
     <div class="nlnv__container">
       @yield('content')
+    </div>
+
+    <div class="nlnv__container">
       @include('layouts.footer')
     </div>
   </body>

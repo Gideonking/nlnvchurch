@@ -23,6 +23,14 @@ html {
     transition-delay: 0.5s;
     transition-timing-function: ease;
     transition: 0.5s all;
+    &--blue {
+      background-color: $secondary-bg;
+      color: $secondary-text;
+    }
+    &--dark {
+      background-color: $tertiary-bg;
+      color: $secondary-text;
+    }
   }
   &__heading {
     display: inline-block;

@@ -1,8 +1,7 @@
 <?php
 Route::get('/', 'WelcomeController@index')->name('home');
-Route::get('/about', function() {
-  return view('pages/about');
-});
+Route::get('/about', function() { return view('pages/about'); });
+Route::get('/directions', function() { return view('pages/directions'); });
 
 // Route::get('/home', 'PostController@index')->name('home');
 Route::get('/posts/create', 'PostController@create');
