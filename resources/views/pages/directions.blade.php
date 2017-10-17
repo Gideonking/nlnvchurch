@@ -5,10 +5,10 @@
 <div class="directions__banner">
   <h1 class="nlnv__heading kor-main">찾아오시는 길</h1>
   <hr class="divider divider--green">
-  <p>2472 Walnut Ave, Tustin, CA 92780</p>
-  <p>(310) 991-6544</p>
+  <p class="directions__banner-info">2472 Walnut Ave, Tustin, CA 92780</p>
+  <p class="directions__banner-info">(310) 991-6544</p>
 
-  <div class="col-lg-4">
+  <div class="col-xs-10 col-sm-6 col-lg-4 directions__banner-input">
     <div class="input-group input-group-lg">
       <input type="text" class="form-control directions__input-from kor-main" placeholder="출발지 주소" aria-label="출발지 주소">
       <span class="input-group-btn">
@@ -16,10 +16,6 @@
       </span>
     </div>
   </div>
-</div>
-
-<div class="row directions__list-container">
-  <div class="directions__list col-md-6 col-md-offset-3"></div>
 </div>
 
 <div class="directions__map-container">
@@ -44,6 +40,7 @@
           };
 
       map = new google.maps.Map(document.getElementsByClassName("directions__map")[0], myOptions);
+      center = map.getCenter();
 
       if (geocoder) {
         geocoder.geocode({ 'address': address }, function(results, status) {
@@ -321,16 +318,26 @@
           travelMode: 'DRIVING'
         }, function(response, status) {
           if (status === 'OK') {
+            $('.directions__list-container').slideDown();
             currentMarker.setMap(null);
             directionsDisplay.setDirections(response);
-            console.log(response);
+
+            $('html, body').animate({
+              scrollTop: $('.directions__map-container').offset().top
+            }, 500);
           } else {
-            window.alert('Directions request failed due to ' + status);
+            window.alert('Invaid Address :( Please try again!');
           }
         });
       }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initMap" async defer></script>
+</div>
+
+<div class="col-md-6 col-md-offset-3 directions__list-container text-center">
+  <h2 class="kor-main">이동 경로</h2>
+  <hr class="divider divider--gold">
+  <div class="directions__list"></div>
 </div>
 
 @endsection

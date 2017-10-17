@@ -9071,7 +9071,7 @@ body.loaded .nav {
   background-image: url("/images/nlnv-directions-banner.jpg");
   background-size: cover;
   background-position: center;
-  height: 450px;
+  height: 50vh;
   color: #ffffff;
 }
 
@@ -9090,8 +9090,13 @@ body.loaded .nav {
   position: relative;
 }
 
-.directions__list-container {
-  padding: 12rem 0;
+.directions__banner-info {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.directions__banner-input {
+  margin-top: 1rem;
 }
 
 .directions__map {
@@ -9099,7 +9104,18 @@ body.loaded .nav {
 }
 
 .directions__map-container {
-  height: 500px;
+  height: 50vh;
+  width: 100%;
+}
+
+.directions__list-container {
+  display: none;
+  padding: 2rem 2rem 5rem;
+}
+
+.directions__list .adp,
+.directions__list .adp table {
+  width: 100%;
 }
 
 .footer {

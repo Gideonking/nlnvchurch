@@ -897,6 +897,12 @@ $(function () {
       scrollTop: target
     }, 500);
   });
+
+  if ($('.directions__banner-input').length > 0) {
+    $('body').on('keypress', function (e) {
+      if ($('.directions__input-from').is(':focus') && e.keyCode == 13) $('.directions__find-btn').trigger('click');
+    });
+  }
 });
 
 function enter() {
