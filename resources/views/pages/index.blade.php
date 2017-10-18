@@ -105,40 +105,6 @@
     </div>
   </div>
 
-  {{-- <div class="welcome-card-container">
-    <div class="col-md-12 col-lg-10 col-lg-offset-1 card-container welcome-card--events">
-      <div class="card-title">
-        <h2>Events</h2>
-      </div>
-      <div class="slider">
-        <div>
-          <div class="events-section events-section--image col-md-6" style="background-image: url(/images/events/korean-school.jpg);"></div>
-          <div class="events-section events-section--content col-md-6">
-            <h3 class="events-title">NLNV Korean School Begins</h3>
-            <hr class="divider divider--darkgreen">
-            <div class="events-desc">
-              <p>9.23.2017</p>
-              <p>Every Saturday 9:30AM - 11:30AM</p>
-            </div>
-            <a class="events-btn" href="#">LEARN MORE</a>
-          </div>
-        </div>
-        <div>
-          <div class="events-section events-section--image col-md-6" style="background-image: url(/images/events/homeless-ministry.jpg);"></div>
-          <div class="events-section events-section--content col-md-6">
-            <h3 class="events-title">Homeless Ministry</h3>
-            <hr class="divider divider--darkgreen">
-            <div class="events-desc">
-              <p>To reach the homeless men and women in our community and share with them the love of God.</p>
-              <p></p>
-            </div>
-            <a class="events-btn" href="#">LEARN MORE</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
-
   <div class="connect__container">
     <div class="connect__wrapper">
       <h2 class="nlnv__heading">Connect with us</h2>

@@ -83,6 +83,33 @@ $(function() {
     });
   }
 
+  if ($('.about__tab-section').length > 0) {
+  	var clickedTab = $('.about__tab-lists > .active'),
+        tabWrapper = $('.about__tab-contents'),
+        activeTab = tabWrapper.find('.active');
+
+  	activeTab.show();
+
+  	$('.about__tab-list').on('click', function() {
+  		$('.about__tab-list').removeClass('active');
+  		$(this).addClass('active');
+  		clickedTab = $('.about__tab-lists .active');
+
+  		activeTab.fadeOut(250, function() {
+  			$('.about__tab-content').removeClass('active');
+
+  			var clickedTabIndex = clickedTab.index();
+
+  			$('.about__tab-content').eq(clickedTabIndex).addClass('active');
+  			activeTab = $('.about__tab-contents > .active');
+				activeTab.fadeIn(250);
+        $('html, body').animate({
+          scrollTop: $('.about__tab-section').offset().top
+        }, 500);
+  		});
+  	});
+  }
+
   enter();
 
   $('body').on('click', '.nav__link-mobile, .nav__overlay', function(e) {

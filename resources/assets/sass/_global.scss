@@ -6,10 +6,12 @@ html {
 
 *.kor-main {
   font-family: 'Nanum Gothic', serif;
+  word-break: keep-all;
 }
 
 *.kor-sub {
   font-family: 'Nanum Myeongjo', serif;
+  word-break: keep-all;
 }
 
 .nlnv {
@@ -33,12 +35,19 @@ html {
     }
   }
   &__heading {
+    position: relative;
     display: inline-block;
     font-size: 4rem;
     font-weight: 600;
     margin: 0;
     line-height: 1;
     text-transform: uppercase;
+    z-index: 1;
+  }
+  &__subheading {
+    max-width: 580px;
+    margin: auto;
+    font-size: 2rem;
   }
 }
 
@@ -57,6 +66,9 @@ body.loaded {
     }
     &__heading {
       font-size: 3rem;
+    }
+    &__subheading {
+      font-size: 1.5rem;
     }
   }
   svg.arrow-down {
@@ -88,6 +100,18 @@ body.loaded {
       text-decoration: none;
     }
   }
+  &--gold {
+    color: $gold;
+  }
+  &--blue {
+    color: $blue;
+  }
+  &--green {
+    color: $green;
+  }
+  &--darkgreen {
+    color: $darkgreen;
+  }
 }
 
 .divider {
@@ -118,6 +142,23 @@ body.loaded {
 
   &--margin-b-lg {
     margin-bottom: 4rem;
+  }
+
+  &--wrap {
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 1px;
+      background: $white;
+    }
+    &:before {
+      margin: 0 auto 2rem;
+    }
+    &:after {
+      margin: 2rem auto;
+    }
   }
 }
 
