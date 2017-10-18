@@ -7,7 +7,7 @@
   </div>
   <div class="about__tab-section">
   	<ul class="about__tab-lists">
-  		<li class="about__tab-list active kor-main">비전 / 사역</li>
+  		<li class="about__tab-list active kor-main">비전</li>
   		<li class="about__tab-list kor-main">인사말</li>
   		<li class="about__tab-list kor-main">섬기는 분들</li>
   	</ul>
@@ -45,5 +45,25 @@
         </div>
   		</li>
   	</ul>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 about__card">
+      <p>사역 카드</p>
+    </div>
+    <div class="col-md-4 col-sm-6 about__card">
+      <p>사역 카드</p>
+    </div>
+    <div class="col-md-4 col-sm-6 about__card">
+      <p>사역 카드</p>
+    </div>
+    <div class="col-md-4 col-sm-6 about__card">
+      <p>사역 카드</p>
+    </div>
+    <div class="col-md-4 col-sm-6 about__card">
+      <p>사역 카드</p>
+    </div>
+    <div class="col-md-4 col-sm-6 about__card">
+      <p>사역 카드</p>
+    </div>
   </div>
 @endsection

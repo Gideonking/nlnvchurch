@@ -9202,7 +9202,6 @@ body.loaded .nav {
 }
 
 .about__tab-content {
-  min-height: calc(100vh - 464px);
   width: 100%;
   position: relative;
   top: 0;
@@ -9222,6 +9221,10 @@ body.loaded .nav {
 .about__vision-icon.fa {
   font-size: 4rem;
   margin: 2rem auto;
+}
+
+.about__card {
+  height: 300px;
 }
 
 .directions__banner {
