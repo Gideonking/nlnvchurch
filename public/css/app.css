@@ -8391,7 +8391,8 @@ html {
   color: #ffffff;
 }
 
-.nlnv__heading {
+.nlnv__heading,
+.nlnv__heading--sm {
   position: relative;
   display: inline-block;
   font-size: 4rem;
@@ -8400,6 +8401,10 @@ html {
   line-height: 1;
   text-transform: uppercase;
   z-index: 1;
+}
+
+.nlnv__heading--sm {
+  font-size: 2.5rem;
 }
 
 .nlnv__subheading {
@@ -8419,8 +8424,13 @@ body.loaded .nlnv__container {
     margin-left: 0;
   }
 
-  .nlnv__heading {
+  .nlnv__heading,
+  .nlnv__heading--sm {
     font-size: 3rem;
+  }
+
+  .nlnv__heading--sm {
+    font-size: 2.25rem;
   }
 
   .nlnv__subheading {
@@ -8433,7 +8443,8 @@ body.loaded .nlnv__container {
 }
 
 @media screen and (max-width: 320px) {
-  .nlnv__heading {
+  .nlnv__heading,
+  .nlnv__heading--sm {
     font-size: 2.5rem;
   }
 }
@@ -9225,6 +9236,88 @@ body.loaded .nav {
 
 .about__card {
   height: 300px;
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__card > * {
+  position: relative;
+}
+
+.about__card:before,
+.about__card:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.about__card:before {
+  background-color: rgba(255, 235, 178, 0.5);
+}
+
+.about__card:after {
+  border: 10px solid #ffffff;
+  opacity: 0.2;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.about__card:hover:before {
+  background-color: rgba(255, 235, 178, 0.75);
+}
+
+.about__card:hover:after {
+  opacity: 0;
+}
+
+.about__card-info {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.about__card--leader {
+  background-image: url(/images/about/about-leadership.jpg);
+}
+
+.about__card--disciple {
+  background-image: url(/images/about/about-biblestudy.jpg);
+}
+
+.about__card--faith {
+  background-image: url(/images/about/about-faith.jpg);
+}
+
+.about__card--pray {
+  background-image: url(/images/about/about-pray.jpg);
+}
+
+.about__card--bible {
+  background-image: url(/images/about/about-bible.jpg);
+}
+
+.about__card--school {
+  background-image: url(/images/about/about-school.jpg);
 }
 
 .directions__banner {

@@ -46,24 +46,42 @@
   		</li>
   	</ul>
   </div>
-  <div class="row">
-    <div class="col-md-4 col-sm-6 about__card">
-      <p>사역 카드</p>
+  <div class="about__card-container">
+    <div class="col-md-4 col-sm-6 about__card about__card--leader">
+      <h3 class="nlnv__heading--sm kor-main">목장 리더</h3>
+      <hr class="divider divider--blue">
+      <p class="about__card-info kor-main">매주 (수)</p>
+      <p class="about__card-info kor-main">7:30-8:30PM 교회 사무실</p>
     </div>
-    <div class="col-md-4 col-sm-6 about__card">
-      <p>사역 카드</p>
+    <div class="col-md-4 col-sm-6 about__card about__card--faith">
+      <h3 class="nlnv__heading--sm kor-main">믿음의 삶</h3>
+      <hr class="divider divider--blue">
+      <p class="about__card-info kor-main">매주 (목)</p>
+      <p class="about__card-info kor-main">7:00-9:00PM 교회</p>
     </div>
-    <div class="col-md-4 col-sm-6 about__card">
-      <p>사역 카드</p>
+    <div class="col-md-4 col-sm-6 about__card about__card--disciple">
+      <h3 class="nlnv__heading--sm kor-main">제자의 삷</h3>
+      <hr class="divider divider--blue">
+      <p class="about__card-info kor-main">매주 (토)</p>
+      <p class="about__card-info kor-main">9:30-11:30AM 교회</p>
     </div>
-    <div class="col-md-4 col-sm-6 about__card">
-      <p>사역 카드</p>
+    <div class="col-md-4 col-sm-6 about__card about__card--bible">
+      <h3 class="nlnv__heading--sm kor-main">성경 통독</h3>
+      <hr class="divider divider--blue">
+      <p class="about__card-info kor-main">매주 (금)</p>
+      <p class="about__card-info kor-main">7:00-9:00PM 교회</p>
     </div>
-    <div class="col-md-4 col-sm-6 about__card">
-      <p>사역 카드</p>
+    <div class="col-md-4 col-sm-6 about__card about__card--pray">
+      <h3 class="nlnv__heading--sm kor-main">중보 기도</h3>
+      <hr class="divider divider--blue">
+      <p class="about__card-info kor-main">매주 (수)</p>
+      <p class="about__card-info kor-main">6:30-7:30PM 본당</p>
     </div>
-    <div class="col-md-4 col-sm-6 about__card">
-      <p>사역 카드</p>
+    <div class="col-md-4 col-sm-6 about__card about__card--school">
+      <h3 class="nlnv__heading--sm kor-main">한글 학교</h3>
+      <hr class="divider divider--blue">
+      <p class="about__card-info kor-main">매주 (토)</p>
+      <p class="about__card-info kor-main">9:30-11:30AM</p>
     </div>
   </div>
 @endsection

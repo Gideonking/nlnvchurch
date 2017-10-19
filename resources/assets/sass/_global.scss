@@ -43,6 +43,10 @@ html {
     line-height: 1;
     text-transform: uppercase;
     z-index: 1;
+    &--sm {
+      @extend .nlnv__heading;
+      font-size: 2.5rem;
+    }
   }
   &__subheading {
     max-width: 580px;
@@ -66,6 +70,9 @@ body.loaded {
     }
     &__heading {
       font-size: 3rem;
+      &--sm {
+        font-size: 2.25rem;
+      }
     }
     &__subheading {
       font-size: 1.5rem;
