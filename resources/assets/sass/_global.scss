@@ -14,6 +14,10 @@ html {
   word-break: keep-all;
 }
 
+img {
+  max-width: 100%;
+}
+
 .nlnv {
   &__container {
     position: relative;

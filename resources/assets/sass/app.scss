@@ -7,6 +7,7 @@
 // Styles
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "variables";
+@import "mixins";
 @import "global";
 
 // Pages
@@ -19,3 +20,12 @@
 // Components
 @import "connect";
 @import "card";
+
+// Mixin helper call
+.padding {
+  @include generate-spacing(padding);
+}
+
+.margin {
+  @include generate-spacing(margin);
+}
