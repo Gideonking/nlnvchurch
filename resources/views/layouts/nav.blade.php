@@ -33,10 +33,6 @@
     <i class="nav__icon fa fa-heart" aria-hidden="true"></i>
     <p class="nav__text kor-main">협력/후원</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'contact') echo 'active'; ?>" href="/contact">
-    <i class="nav__icon fa fa-envelope" aria-hidden="true"></i>
-    <p class="nav__text kor-main">연락처</p>
-  </a>
   <a class="nav__link <?php if($active_page === 'directions') echo 'active'; ?>" href="/directions">
     <i class="nav__icon fa fa-map-signs" aria-hidden="true"></i>
     <p class="nav__text kor-main">찾아오시는길</p>
