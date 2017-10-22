@@ -25,7 +25,10 @@ class VideoController extends Controller
 
       if ($youtube_video_activity === 'upload') {
         $youtube_video_id = $youtube_result['contentDetails']['upload']['videoId'];
-        $youtube_video_thumbnail = $youtube_result['snippet']['thumbnails']['high']['url'];
+        // $youtube_video_thumbnail = $youtube_result['snippet']['thumbnails']['high']['url'];
+        // https://i.ytimg.com/vi/VIDEOID!!!/hqdefault.jpg
+        // "width": 480,
+        // "height": 360,
         $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_result['snippet']['description']);
         $youtube_video_date = substr($youtube_result['snippet']['title'], 0, 8);
 
@@ -35,7 +38,6 @@ class VideoController extends Controller
         {
           $video->addNewVideo(
             $youtube_video_id,
-            $youtube_video_thumbnail,
             $youtube_video_description,
             $youtube_video_date
           );
