@@ -925,6 +925,17 @@ $(function () {
     }, 500);
   });
 
+  $('body').on('click', '.messages__video-link', function (e) {
+    e.preventDefault();
+
+    var videoId = $(this).attr('href');
+
+    $('.home__message-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0');
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+  });
+
   if ($('.directions__banner-input').length > 0) {
     $('body').on('keypress', function (e) {
       if ($('.directions__input-from').is(':focus') && e.keyCode == 13) $('.directions__find-btn').trigger('click');

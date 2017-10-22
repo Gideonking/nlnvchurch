@@ -12,11 +12,6 @@ class VideoController extends Controller
   {
     $messages = $video->getAllVideos();
 
-    // $youtube_video_thumbnail = $youtube_result['snippet']['thumbnails']['high']['url'];
-    // https://i.ytimg.com/vi/VIDEOID!!!/hqdefault.jpg
-    // "width": 480,
-    // "height": 360,
-
     return view('pages/messages', compact('messages'));
   }
 
