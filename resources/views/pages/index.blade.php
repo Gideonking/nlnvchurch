@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
   <div class="home__banner">
     <div class="home__banner-text-container">
       <h1 class="home__banner-text">
@@ -31,7 +32,7 @@
     <div class="home__container home__message clearfix">
       <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <h2 class="home__message-title">주일 설교영상</h2>
-        <a class="home__message-btn" href="#">Watch More</a>
+        <a class="home__message-btn" href="/messages">Watch More</a>
         <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvid->video_id }}?rel=0" frameborder="0" allowfullscreen></iframe>
         <hr class="divider divider--green">
         <div class="home__message-desc text-center kor-main">
@@ -117,4 +118,5 @@
       </div>
     </div>
   </div>
+
 @endsection

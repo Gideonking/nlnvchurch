@@ -2,6 +2,7 @@
 Route::get('/', 'WelcomeController@index')->name('home');
 Route::get('/about', function() { return view('pages/about'); });
 Route::get('/directions', function() { return view('pages/directions'); });
+Route::get('/messages', 'VideoController@index');
 Route::get('/test', 'VideoController@store');
 
 // Route::get('/home', 'PostController@index')->name('home');

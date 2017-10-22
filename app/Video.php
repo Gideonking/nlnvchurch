@@ -13,6 +13,11 @@ class Video extends Model
       ]);
     }
 
+    public function getAllVideos()
+    {
+      return Video::orderBy('id', 'desc')->get();
+    }
+
     public function latestVideo()
     {
       return Video::all()->last();
