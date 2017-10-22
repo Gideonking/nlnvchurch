@@ -27,19 +27,19 @@
     </div>
   </div>
 
-  <div class="home__container home__message clearfix">
-    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-      <h2 class="home__message-title">주일 설교영상</h2>
-      <a class="home__message-btn" href="#">Watch More</a>
-      <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvidid }}?rel=0" frameborder="0" allowfullscreen></iframe>
-      <hr class="divider divider--green">
-      <div class="home__message-desc text-center kor-main">
-        <p>성령의 열매 시리즈 #1 - 사랑</p>
-        <p>October 8, 2017</p>
-        <p>Pastor Peter Choi</p>
+  @if($ytvid)
+    <div class="home__container home__message clearfix">
+      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h2 class="home__message-title">주일 설교영상</h2>
+        <a class="home__message-btn" href="#">Watch More</a>
+        <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvid->video_id }}?rel=0" frameborder="0" allowfullscreen></iframe>
+        <hr class="divider divider--green">
+        <div class="home__message-desc text-center kor-main">
+          {!! $ytvid_description !!}
+        </div>
       </div>
     </div>
-  </div>
+  @endif
 
   <div class="home__container home__container--blue clearfix">
     <div class="col-md-12 col-lg-10 col-lg-offset-1 text-center">

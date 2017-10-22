@@ -3,23 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Video;
+use Carbon\Carbon;
 
 class WelcomeController extends Controller
 {
-  public function index()
+  public function index(Video $video)
   {
-    $curl = curl_init();
+    $ytvid = $video->latestVideo();
 
-    curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://www.googleapis.com/youtube/v3/search?key=' . env('GOOGLE_API_KEY') . '&channelId=UCdmLI5xDRzZmNVAch8HCyGg&part=snippet,id&order=date&maxResults=1'
-    ));
+    if ($ytvid !== NULL)
+    {
+      $ytvid_time = Carbon::parse($ytvid->video_date);
+      $ytvid_time = $ytvid_time->toFormattedDateString();
+      $ytvid_description = '<p>' . implode('</p><p>', array_filter(explode("\n", $ytvid->video_description))) . '</p><p>' . $ytvid_time . '</p>';
+    }
 
-    $res = curl_exec($curl);
-    curl_close($curl);
-    $ytresult = json_decode($res, true);
-    $ytvidid = $ytresult['items'][0]['id']['videoId'];
-
-    return view('pages/index', compact('ytvidid'));
+    return view('pages/index', compact('ytvid', 'ytvid_description'));
   }
 }
