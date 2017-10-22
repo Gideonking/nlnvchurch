@@ -144,13 +144,11 @@
 
 .home__message {
   &-title {
-    margin: 0;
     text-transform: uppercase;
     display: inline-block;
     font-size: 5rem;
     font-weight: 400;
     color: $primary-text;
-    margin: 0;
     line-height: 1;
   }
   &-btn {
@@ -162,6 +160,7 @@
     font-weight: 400;
     letter-spacing: 5px;
     transition: 0.3s all;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     box-sizing: border-box;

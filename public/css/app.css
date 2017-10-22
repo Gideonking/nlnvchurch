@@ -8945,13 +8945,11 @@ body.loaded .nav {
 }
 
 .home__message-title {
-  margin: 0;
   text-transform: uppercase;
   display: inline-block;
   font-size: 5rem;
   font-weight: 400;
   color: #333333;
-  margin: 0;
   line-height: 1;
 }
 
@@ -8965,6 +8963,7 @@ body.loaded .nav {
   letter-spacing: 5px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-box-sizing: border-box;
