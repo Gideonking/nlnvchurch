@@ -11,8 +11,10 @@ class VideoController extends Controller
   public function index(Video $video)
   {
     $messages = $video->getAllVideos();
+    $message_date = Carbon::parse($messages->first()->video_date);
+    $message_date = $message_date->toFormattedDateString();
 
-    return view('pages/messages', compact('messages'));
+    return view('pages/messages', compact('messages', 'message_date'));
   }
 
   public function store(Video $video)

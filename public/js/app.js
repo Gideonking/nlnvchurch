@@ -892,6 +892,14 @@ $(function () {
     });
   }
 
+  if ($('.directions__banner-input').length > 0) {
+    $('body').on('keypress', function (e) {
+      if ($('.directions__input-from').is(':focus') && e.keyCode == 13) $('.directions__find-btn').trigger('click');
+    });
+  }
+
+  $('.js-lazy').Lazy();
+
   enter();
 
   $('body').on('click', '.nav__link-mobile, .nav__overlay', function (e) {
@@ -928,19 +936,30 @@ $(function () {
   $('body').on('click', '.messages__video-link', function (e) {
     e.preventDefault();
 
-    var videoId = $(this).attr('href');
+    if (!$(this).hasClass('messages__card-inner--active')) {
+      var videoId = $(this).attr('href'),
+          videoDesc = $(this).find('.messages__card-desc'),
+          newVideoDesc = '',
+          newVideoDate = $(this).find('.messages__card-date').text();
 
-    $('.home__message-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0');
-    $('html, body').animate({
-      scrollTop: 0
+      $(videoDesc).each(function () {
+        newVideoDesc = newVideoDesc + '<p>' + $(this).text() + '</p>';
+      });
+
+      $('.messages__card-inner--active').removeClass('messages__card-inner--active');
+      $(this).addClass('messages__card-inner--active');
+      $('.home__message-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0');
+
+      $('.home__message-desc').html(newVideoDesc);
+      $('.home__message-title').text(newVideoDate);
+    }
+
+    setTimeout(function () {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
     }, 500);
   });
-
-  if ($('.directions__banner-input').length > 0) {
-    $('body').on('keypress', function (e) {
-      if ($('.directions__input-from').is(':focus') && e.keyCode == 13) $('.directions__find-btn').trigger('click');
-    });
-  }
 });
 
 function enter() {

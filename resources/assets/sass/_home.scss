@@ -73,6 +73,9 @@
   &--dark {
     background-color: $tertiary-bg;
     color: $secondary-text;
+    .home__message-title {
+      color: $secondary-text;
+    }
   }
 }
 

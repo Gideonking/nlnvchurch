@@ -8877,6 +8877,10 @@ body.loaded .nav {
   color: #ffffff;
 }
 
+.home__container--dark .home__message-title {
+  color: #ffffff;
+}
+
 .home__service {
   margin-top: 100vh;
   position: relative;
@@ -9348,10 +9352,120 @@ body.loaded .nav {
   }
 }
 
+.messages__container {
+  position: relative;
+  padding: 12rem 0;
+}
+
+.messages__container--dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.messages__container--dark .home__message-title {
+  color: #ffffff;
+}
+
 .messages__card {
-  height: 300px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  height: 250px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.messages__card-status {
+  display: none;
+}
+
+.messages__card-desc {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.messages__card-date {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #00C28C;
+}
+
+.messages__card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 1.3rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.messages__card-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.messages__card-inner:active,
+.messages__card-inner:focus,
+.messages__card-inner:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.messages__card-inner:active .messages__card-content,
+.messages__card-inner:focus .messages__card-content,
+.messages__card-inner:hover .messages__card-content {
+  font-size: 1.5rem;
+}
+
+.messages__card-inner > * {
+  position: relative;
+}
+
+.messages__card-inner--active {
+  border: 10px solid #009B70;
+}
+
+.messages__card-inner--active .messages__card-status {
+  display: block;
+}
+
+.messages__card-inner--active .messages__card-desc {
+  background-color: transparent;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.messages__card-inner--active:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .directions__banner {
