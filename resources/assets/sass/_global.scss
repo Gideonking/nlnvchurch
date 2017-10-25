@@ -57,6 +57,31 @@ img {
     margin: auto;
     font-size: 2rem;
   }
+
+  &__btn {
+    background-color: $transparent;
+    color: $tertiary-text;
+    display: inline-block;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    transition: 0.3s all;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid $tertiary-text;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $secondary-text;
+      background-color: $tertiary-text;
+    }
+  }
 }
 
 body.loaded {

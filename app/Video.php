@@ -22,4 +22,9 @@ class Video extends Model
     {
       return Video::all()->last();
     }
+
+    public function series()
+    {
+      return $this->belongsTo(Series::class);
+    }
 }

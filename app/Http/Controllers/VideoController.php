@@ -8,13 +8,17 @@ use Carbon\Carbon;
 
 class VideoController extends Controller
 {
-  public function index(Video $video)
+  public function show(Video $video)
   {
+    $section_title = '지난 설교 영상';
     $messages = $video->getAllVideos();
-    $message_date = Carbon::parse($messages->first()->video_date);
-    $message_date = $message_date->toFormattedDateString();
+    $first_message = $messages->first();
+    $first_message_date = Carbon::parse($first_message->video_date);
+    $first_message_date = $first_message_date->toFormattedDateString();
 
-    return view('pages/messages', compact('messages', 'message_date'));
+    $series = $first_message->series;
+
+    return view('messages/show', compact('messages', 'first_message', 'first_message_date', 'section_title', 'series'));
   }
 
   public function store(Video $video)

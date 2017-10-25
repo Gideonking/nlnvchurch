@@ -66,6 +66,9 @@
   position: relative;
   padding: 12rem 0;
   background-color: $primary-bg;
+  &--sm {
+    padding: 4rem 0;
+  }
   &--blue {
     background-color: $secondary-bg;
     color: $secondary-text;
@@ -178,6 +181,9 @@
   }
   &-desc {
     font-size: 1.75rem;
+  }
+  &-iframe--sm {
+    height: 400px;
   }
 }
 

@@ -2,8 +2,10 @@
 Route::get('/', 'WelcomeController@index')->name('home');
 Route::get('/about', function() { return view('pages/about'); });
 Route::get('/directions', function() { return view('pages/directions'); });
-Route::get('/messages', 'VideoController@index');
-Route::get('/test', 'VideoController@store');
+Route::get('/messages', 'VideoController@show');
+Route::get('/series/{series}', 'SeriesController@show');
+
+Route::get('/test', 'VideoController@store'); // For cron job later
 
 // Route::get('/home', 'PostController@index')->name('home');
 // Route::get('/posts/create', 'PostController@create');
