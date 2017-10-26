@@ -8354,6 +8354,9 @@ body,
 html {
   font-family: 'Raleway', 'Helvetica', sans-serif;
   line-height: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *.kor-main {
@@ -8442,6 +8445,20 @@ img {
   text-decoration: none;
   color: #ffffff;
   background-color: #00C28C;
+}
+
+.nlnv__btn--solid {
+  background-color: #00C28C;
+  color: #ffffff;
+  border: 2px solid #00C28C;
+}
+
+.nlnv__btn--solid:active,
+.nlnv__btn--solid:focus,
+.nlnv__btn--solid:hover {
+  text-decoration: none;
+  background-color: #009B70;
+  border: 2px solid #009B70;
 }
 
 body.loaded .nlnv__container {
@@ -8877,7 +8894,7 @@ body.loaded .nav {
   position: relative;
   display: block;
   letter-spacing: 5px;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 1rem 2rem;
@@ -9520,6 +9537,75 @@ body.loaded .nav {
   margin: 0 0 10px;
 }
 
+.series__card-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.series__card-icon.fa {
+  display: none;
+  font-size: 5rem;
+  margin-right: 2rem;
+  color: #009B70;
+}
+
+@media screen and (max-width: 414px) {
+  .series__card-icon.fa {
+    display: inline-block;
+  }
+
+  .series__card-list {
+    height: auto;
+    border-top: 2px solid #00C28C;
+    padding: 0;
+  }
+
+  .series__card-list .messages__card-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #333333;
+    border: none;
+    padding: 10px;
+    background-image: none !important;
+  }
+
+  .series__card-list .messages__card-inner:before {
+    display: none;
+  }
+
+  .series__card-list .messages__card-inner.active {
+    border: none;
+  }
+
+  .series__card-list .messages__card-date {
+    display: none;
+  }
+
+  .series__card-list .messages__card-content {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .series__card-list .messages__card-desc {
+    text-align: left;
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  .series__card-list .messages__card-status {
+    margin: 5px 0;
+  }
+
+  .series__card-list .messages__card-icon {
+    display: none;
+  }
+}
+
 .directions__banner {
   position: relative;
   display: -webkit-box;
@@ -9591,7 +9677,7 @@ body.loaded .nav {
   color: #ffffff;
   text-align: center;
   padding: 3rem 2rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .footer__copyright {
@@ -9600,8 +9686,7 @@ body.loaded .nav {
 }
 
 .footer__credit {
-  font-weight: 100;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width: 320px) {
@@ -9759,7 +9844,6 @@ body.loaded .nav {
   padding: 10px 15px;
   color: #ffffff;
   font-size: 1.5rem;
-  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -9785,7 +9869,7 @@ body.loaded .nav {
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1.35rem;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   text-transform: uppercase;

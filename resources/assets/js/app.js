@@ -157,6 +157,8 @@ $(function() {
     if (!$(this).hasClass('messages__card-inner--active')) {
       var videoId = $(this).attr('href'),
           videoDesc = $(this).find('.messages__card-desc'),
+          videoSeriesId = $(this).data('series-id'),
+          videoSeriesTitle = $(this).data('series-title'),
           newVideoDesc = '',
           newVideoDate = $(this).find('.messages__card-date').text();
 
@@ -168,14 +170,18 @@ $(function() {
       $(this).addClass('messages__card-inner--active');
       $('.home__message-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0');
 
-      $('.home__message-desc').html(newVideoDesc);
-      $('.home__message-title').text(newVideoDate);
+      if ($('.home__message-desc').length > 0) $('.home__message-desc').html(newVideoDesc);
+      if ($('.home__message-title').length > 0) $('.home__message-title').text(newVideoDate);
+      if ($('.home__message-series').length > 0) {
+        $('.home__message-series').attr('href', '/series/' + videoSeriesId);
+        var titleWord = (videoSeriesId == 1) ? ' 영상 ' : ' 시리즈 ';
+        $('.home__message-series-title').text(videoSeriesTitle + titleWord + '더보기');
+      }
     }
 
     setTimeout(function() {
-      var target = ($('.home__message-iframe').length > 0) ? $('.home__message-iframe').offset().top - 30 : 0;
       $('html, body').animate({
-        scrollTop: target
+        scrollTop: 0
       }, 500);
     }, 500);
   });

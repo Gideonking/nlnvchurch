@@ -19,12 +19,13 @@
     </div>
     <div class="col-md-6 text-center">
       @foreach($messages as $message)
-          <div class="col-sm-6 col-md-12 col-lg-6 messages__card">
+          <div class="col-sm-6 col-md-12 col-lg-6 messages__card series__card-list">
             <a class="js-lazy messages__card-inner messages__video-link @if ($loop->first) messages__card-inner--active @endif" data-src="https://i.ytimg.com/vi/{{ $message->video_id }}/maxresdefault.jpg" href="{{ $message->video_id }}">
               <p class="messages__card-date kor-main">{{ date_format(date_create($message->video_date), "M j, Y") }}</p>
+              <i class="fa fa-play-circle-o series__card-icon" aria-hidden="true"></i>
               <div class="messages__card-content">
                 <p class="messages__card-desc kor-main text-center">{!! implode('<p class="messages__card-desc kor-main text-center">', array_filter(explode("\n", $message->video_description))) !!}</p>
-                <p class="messages__card-status kor-main text--darkgreen"><i class="fa fa-play-circle-o" aria-hidden="true"></i> 재생중</p>
+                <p class="messages__card-status kor-main text--darkgreen"><i class="fa fa-play-circle-o messages__card-icon" aria-hidden="true"></i> 재생중</p>
               </div>
             </a>
           </div>

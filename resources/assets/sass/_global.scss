@@ -2,6 +2,9 @@ body,
 html {
   font-family: 'Raleway', 'Helvetica', sans-serif;
   line-height: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *.kor-main {
@@ -80,6 +83,20 @@ img {
       text-decoration: none;
       color: $secondary-text;
       background-color: $tertiary-text;
+    }
+
+    &--solid {
+      background-color: $green;
+      color: $secondary-text;
+      border: 2px solid $green;
+
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        background-color: $darkgreen;
+        border: 2px solid $darkgreen;
+      }
     }
   }
 }

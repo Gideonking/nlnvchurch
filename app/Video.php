@@ -9,7 +9,8 @@ class Video extends Model
       Video::create([
         'video_id' => $id,
         'video_description' => $desc,
-        'video_date' => $date
+        'video_date' => $date,
+        'series_id' => 1
       ]);
     }
 
