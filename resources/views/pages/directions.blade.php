@@ -12,7 +12,7 @@
     <div class="input-group input-group-lg">
       <input type="text" class="form-control directions__input-from kor-main" placeholder="출발지 주소" aria-label="출발지 주소">
       <span class="input-group-btn">
-        <button class="btn btn-success directions__find-btn kor-main" type="button">길찾기</button>
+        <button class="btn btn-success directions__find-btn kor-main" type="button"><i class="fa fa-search" aria-hidden="true"></i> 길찾기</button>
       </span>
     </div>
   </div>

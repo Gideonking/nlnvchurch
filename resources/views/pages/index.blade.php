@@ -32,7 +32,7 @@
     <div class="home__container home__message clearfix">
       <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <h2 class="home__message-title">주일 설교영상</h2>
-        <a class="home__message-btn kor-main" href="/messages">영상 더보기</a>
+        <a class="home__message-btn kor-main" href="/series"><i class="fa fa-film" aria-hidden="true"></i> 영상 더보기</a>
         <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvid->video_id }}?rel=0" frameborder="0" allowfullscreen></iframe>
         <hr class="divider divider--green">
         <div class="home__message-desc text-center kor-main">
@@ -60,7 +60,7 @@
               <p class="kor-main">매주 토요일 9:30AM - 11:30AM</p>
             </div>
             <div class="card__cta">
-              <a class="card__btn kor-main" href="#">자세히보기</a>
+              <a class="card__btn kor-main" href="#"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
               <p class="kor-main">홈리스 사역은 홈리스들의 영적인 갈급함을 풀어줌으로 인하여 그들의 삶의 목적이 바뀌어 세상에 빛과 소금과 같은 존재로 바뀔 수 있도록 도와주는 사역입니다.</p>
             </div>
             <div class="card__cta">
-              <a class="card__btn kor-main" href="#">자세히보기</a>
+              <a class="card__btn kor-main" href="#"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@
               <p class="kor-main">매일 하루에 3장씩 성경을 읽으므로 하나님의 말씀을 사모합시다.</p>
             </div>
             <div class="card__cta">
-              <a class="card__btn kor-main" href="#">자세히보기</a>
+              <a class="card__btn kor-main" href="#"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
             </div>
           </div>
         </div>
