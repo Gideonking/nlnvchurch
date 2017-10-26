@@ -62,10 +62,10 @@ img {
     background-color: $transparent;
     color: $tertiary-text;
     display: inline-block;
-    padding: 1.5rem 2.5rem;
-    font-size: 1.35rem;
-    font-weight: 400;
-    letter-spacing: 5px;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
     transition: 0.3s all;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -195,6 +195,19 @@ body.loaded {
     &:after {
       margin: 2rem auto;
     }
+  }
+
+  &--left {
+    margin-left: 0;
+  }
+}
+
+.bg {
+  &--offwhite {
+    background-color: $offwhite;
+  }
+  &--darkgrey {
+    background-color: $darkgrey;
   }
 }
 

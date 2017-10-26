@@ -33,7 +33,9 @@
     &.active {
       cursor: no-drop;
     }
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       text-decoration: none;
       color: $green;
       &:before {

@@ -173,8 +173,9 @@ $(function() {
     }
 
     setTimeout(function() {
+      var target = ($('.home__message-iframe').length > 0) ? $('.home__message-iframe').offset().top - 30 : 0;
       $('html, body').animate({
-        scrollTop: 0
+        scrollTop: target
       }, 500);
     }, 500);
   });

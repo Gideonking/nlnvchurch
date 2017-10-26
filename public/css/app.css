@@ -8421,10 +8421,10 @@ img {
   background-color: rgba(255, 255, 255, 0);
   color: #00C28C;
   display: inline-block;
-  padding: 1.5rem 2.5rem;
-  font-size: 1.35rem;
-  font-weight: 400;
-  letter-spacing: 5px;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 3px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   margin-top: 2rem;
@@ -8567,6 +8567,18 @@ body.loaded .nlnv__container {
   margin: 2rem auto;
 }
 
+.divider--left {
+  margin-left: 0;
+}
+
+.bg--offwhite {
+  background-color: #f5f5f5;
+}
+
+.bg--darkgrey {
+  background-color: #333333;
+}
+
 .accent--light {
   color: #00C28C;
 }
@@ -8638,16 +8650,22 @@ body.loaded .nlnv__container {
   cursor: no-drop;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:focus,
+.nav__link:active {
   text-decoration: none;
   color: #00C28C;
 }
 
-.nav__link:hover:before {
+.nav__link:hover:before,
+.nav__link:focus:before,
+.nav__link:active:before {
   left: 0;
 }
 
-.nav__link:hover .nav__text {
+.nav__link:hover .nav__text,
+.nav__link:focus .nav__text,
+.nav__link:active .nav__text {
   color: #00C28C;
 }
 
@@ -8659,7 +8677,7 @@ body.loaded .nlnv__container {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #f1f4f5;
+  background-color: #f5f5f5;
   z-index: -1;
   -webkit-transition: 0.3s left;
   transition: 0.3s left;
@@ -8903,6 +8921,10 @@ body.loaded .nav {
   color: #ffffff;
 }
 
+.home__container--offwhite {
+  background: #f5f5f5;
+}
+
 .home__container--dark {
   background-color: #333333;
   color: #ffffff;
@@ -8988,10 +9010,10 @@ body.loaded .nav {
   background-color: rgba(255, 255, 255, 0);
   color: #00C28C;
   display: inline-block;
-  padding: 1.5rem 2.5rem;
-  font-size: 1.35rem;
-  font-weight: 400;
-  letter-spacing: 5px;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 3px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   margin-top: 2rem;
@@ -9411,7 +9433,6 @@ body.loaded .nav {
 }
 
 .messages__card-desc {
-  background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5rem 1rem;
   margin: 0;
 }
@@ -9421,6 +9442,7 @@ body.loaded .nav {
   top: 0;
   right: 0;
   padding: 1rem;
+  font-size: 1.25rem;
   background-color: #00C28C;
 }
 
@@ -9441,9 +9463,7 @@ body.loaded .nav {
   position: relative;
   height: 100%;
   width: 100%;
-  font-size: 1.3rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  font-size: 1.5rem;
 }
 
 .messages__card-inner {
@@ -9458,6 +9478,20 @@ body.loaded .nav {
           box-sizing: border-box;
   padding: 2rem;
   color: #ffffff;
+  border: 0px solid #00C28C;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.messages__card-inner:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .messages__card-inner:active,
@@ -9465,12 +9499,7 @@ body.loaded .nav {
 .messages__card-inner:hover {
   text-decoration: none;
   color: #ffffff;
-}
-
-.messages__card-inner:active .messages__card-content,
-.messages__card-inner:focus .messages__card-content,
-.messages__card-inner:hover .messages__card-content {
-  font-size: 1.5rem;
+  border: 5px solid #00C28C;
 }
 
 .messages__card-inner > * {
@@ -9478,7 +9507,7 @@ body.loaded .nav {
 }
 
 .messages__card-inner--active {
-  border: 10px solid #009B70;
+  border: 5px solid #009B70;
 }
 
 .messages__card-inner--active .messages__card-status {
@@ -9489,17 +9518,6 @@ body.loaded .nav {
   background-color: transparent;
   padding: 0;
   margin: 0 0 10px;
-}
-
-.messages__card-inner--active:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .directions__banner {

@@ -18,7 +18,6 @@
     display: none;
   }
   &-desc {
-    background-color: rgba(0, 0, 0, 0.8);
     padding: 0.5rem 1rem;
     margin: 0;
   }
@@ -27,6 +26,7 @@
     top: 0;
     right: 0;
     padding: 1rem;
+    font-size: 1.25rem;
     background-color: $green;
   }
   &-content {
@@ -37,8 +37,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    font-size: 1.3rem;
-    transition: all 0.5s;
+    font-size: 1.5rem;
   }
   &-inner {
     display: block;
@@ -51,20 +50,30 @@
     box-sizing: border-box;
     padding: 2rem;
     color: $secondary-text;
+    border: 0px solid $green;
+    transition: all 0.5s;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
     &:active,
     &:focus,
     &:hover {
       text-decoration: none;
       color: $secondary-text;
-      .messages__card-content {
-        font-size: 1.5rem;
-      }
+      border: 5px solid $green;
     }
     & > * {
       position: relative;
     }
     &--active {
-      border: 10px solid $darkgreen;
+      border: 5px solid $darkgreen;
       .messages__card-status {
         display: block;
       }
@@ -72,16 +81,6 @@
         background-color: rgba(0, 0, 0, 0);
         padding: 0;
         margin: 0 0 10px;
-      }
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 100%;
-        display: block;
-        background-color: rgba(0, 0, 0, 0.8);
       }
     }
   }

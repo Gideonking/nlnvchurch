@@ -17,7 +17,7 @@
     <i class="nav__icon fa fa-pagelines" aria-hidden="true"></i>
     <p class="nav__text kor-main">교회소개</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'messages') echo 'active'; ?>" href="/messages">
+  <a class="nav__link <?php if($active_page === 'series') echo 'active'; ?>" href="/series">
     <i class="nav__icon fa fa-quote-right" aria-hidden="true"></i>
     <p class="nav__text kor-main">설교영상</p>
   </a>

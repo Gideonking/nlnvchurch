@@ -19,6 +19,6 @@ class WelcomeController extends Controller
       $ytvid_description = '<p>' . implode('</p><p>', array_filter(explode("\n", $ytvid->video_description))) . '</p><p>' . $ytvid_time . '</p>';
     }
 
-    return view('pages/index', compact('ytvid', 'ytvid_description'));
+    return view('pages.index', compact('ytvid', 'ytvid_description'));
   }
 }

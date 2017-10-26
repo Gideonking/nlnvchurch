@@ -58,14 +58,14 @@
 			transition-duration: 0.25s;
 			border-radius: 5px 5px 0 0;
 		}
-    &:hover{
-			&:before{
+    &:hover {
+			&:before {
 				transform: translateY(70%);
 			}
 		}
-    &.active{
+    &.active {
 			color: $white;
-			&:before{
+			&:before {
 				transition-duration: 0.5s;
 				background-color: $blue;
 				transform: translateY(0);

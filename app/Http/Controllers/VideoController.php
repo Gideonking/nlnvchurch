@@ -18,7 +18,7 @@ class VideoController extends Controller
 
     $series = $first_message->series;
 
-    return view('messages/show', compact('messages', 'first_message', 'first_message_date', 'section_title', 'series'));
+    return view('messages.show', compact('messages', 'first_message', 'first_message_date', 'section_title', 'series'));
   }
 
   public function store(Video $video)
