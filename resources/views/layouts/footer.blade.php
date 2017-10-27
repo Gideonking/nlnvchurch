@@ -6,5 +6,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/js/app.js" type="text/javascript"></script>
 <script src="/js/vendor/mediacheck.min.js" type="text/javascript"></script>
+<script src="/js/vendor/slick.min.js" type="text/javascript"></script>
 <script src="/js/vendor/jquery-lazy.min.js" type="text/javascript"></script>
 <script src="/js/vendor/jquery-lazy.plugins.min.js" type="text/javascript"></script>

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
   <div class="about__banner text-center">
     <h1 class="nlnv__heading kor-main">교회 소개</h1>
     <hr class="divider divider--blue">
@@ -126,4 +127,5 @@
       <p class="about__card-info kor-main">9:30-11:30AM</p>
     </div>
   </div>
+
 @endsection
