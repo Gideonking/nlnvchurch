@@ -1,7 +1,13 @@
 .support__container {
   position: relative;
-  height: calc(100vh - 104px);
+  height: calc(100vh - 184px);
+  min-height: 525px;
   background-color: $offwhite;
+}
+
+.support__navgination {
+  height: 80px;
+  background-color: $darkgrey;
 }
 
 .support__slider {
@@ -36,8 +42,27 @@
       outline: none;
     }
     &-logo {
-      max-width: 300px;
+      max-width: 75%;
+      width: 275px;
       margin: 0 auto 3rem;
+    }
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .support__slide {
+    &-title {
+      font-size: 2rem;
+    }
+    &-subtitle {
+      font-size: 1.5rem;
     }
   }
 }

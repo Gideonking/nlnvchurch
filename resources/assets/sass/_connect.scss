@@ -38,6 +38,18 @@
       justify-content: space-between;
       width: 80%;
       max-width: 300px;
+      &--full {
+        width: 100% !important;
+        max-width: none !important;
+        justify-content: space-evenly;
+      }
+      &--dark .connect__icon {
+        color: $primary-text;
+        font-size: 3rem;
+        &:hover {
+          color: $primary-text;
+        }
+      }
     }
     &:hover {
       color: $secondary-text;

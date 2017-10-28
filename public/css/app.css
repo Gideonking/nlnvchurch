@@ -8359,6 +8359,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:focus {
+  outline: none;
+}
+
 *.kor-main {
   font-family: 'Nanum Gothic', serif;
   word-break: keep-all;
@@ -8793,7 +8797,7 @@ body.loaded .nav {
   }
 }
 
-@media screen and (min-width: 1025px) and (max-height: 700px) {
+@media screen and (min-width: 1025px) and (max-height: 625px) {
   .nav__link-logo .nav__text {
     font-size: 3rem;
   }
@@ -9608,8 +9612,14 @@ body.loaded .nav {
 
 .support__container {
   position: relative;
-  height: calc(100vh - 104px);
+  height: calc(100vh - 184px);
+  min-height: 525px;
   background-color: #f5f5f5;
+}
+
+.support__navgination {
+  height: 80px;
+  background-color: #333333;
 }
 
 .support__slider {
@@ -9658,8 +9668,28 @@ body.loaded .nav {
 }
 
 .support__slider .support__slide-logo {
-  max-width: 300px;
+  max-width: 75%;
+  width: 275px;
   margin: 0 auto 3rem;
+}
+
+.support__slider .support__slide-title {
+  font-size: 2.5rem;
+}
+
+.support__slider .support__slide-subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 414px) {
+  .support__slide-title {
+    font-size: 2rem;
+  }
+
+  .support__slide-subtitle {
+    font-size: 1.5rem;
+  }
 }
 
 .directions__banner {
@@ -9812,6 +9842,23 @@ body.loaded .nav {
           justify-content: space-between;
   width: 80%;
   max-width: 300px;
+}
+
+.connect__icon-wrapper--full {
+  width: 100% !important;
+  max-width: none !important;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.connect__icon-wrapper--dark .connect__icon {
+  color: #333333;
+  font-size: 3rem;
+}
+
+.connect__icon-wrapper--dark .connect__icon:hover {
+  color: #333333;
 }
 
 .connect__icon:hover {

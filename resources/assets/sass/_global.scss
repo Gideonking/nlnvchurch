@@ -7,6 +7,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:focus {
+  outline: none;
+}
+
 *.kor-main {
   font-family: 'Nanum Gothic', serif;
   word-break: keep-all;
