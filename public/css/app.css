@@ -9612,14 +9612,44 @@ body.loaded .nav {
 
 .support__container {
   position: relative;
-  height: calc(100vh - 184px);
+  height: calc(100vh - 104px);
   min-height: 525px;
   background-color: #f5f5f5;
 }
 
-.support__navgination {
-  height: 80px;
-  background-color: #333333;
+.support__navigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 68px;
+  width: 100%;
+}
+
+.support__navigation-btn {
+  position: absolute;
+  background-color: #009B70;
+  color: #ffffff;
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.support__navigation-btn:hover,
+.support__navigation-btn:focus,
+.support__navigation-btn:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.support__navigation-btn-prev {
+  left: 0;
+  padding-right: 1.5rem;
+}
+
+.support__navigation-btn-next {
+  right: 0;
+  padding-left: 1.5rem;
 }
 
 .support__slider {

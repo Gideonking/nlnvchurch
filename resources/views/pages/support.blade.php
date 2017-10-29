@@ -52,15 +52,15 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="support__navgination">
-  <a href="#">
-    Prev
-  </a>
-  <a href="#">
-    Next
-  </a>
+  <div class="support__navigation">
+    <a class="support__navigation-btn support__navigation-btn-prev" href="#">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </a>
+    <a class="support__navigation-btn support__navigation-btn-next" href="#">
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </a>
+  </div>
 </div>
 
 @endsection

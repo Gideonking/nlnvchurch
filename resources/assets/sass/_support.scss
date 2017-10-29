@@ -1,13 +1,39 @@
 .support__container {
   position: relative;
-  height: calc(100vh - 184px);
+  height: calc(100vh - 104px);
   min-height: 525px;
   background-color: $offwhite;
 }
 
-.support__navgination {
-  height: 80px;
-  background-color: $darkgrey;
+.support__navigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 68px;
+  width: 100%;
+  &-btn {
+    position: absolute;
+    background-color: $darkgreen;
+    color: $white;
+    font-size: 4rem;
+    padding: 1rem;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      text-decoration: none;
+    }
+    &-prev {
+      left: 0;
+      padding-right: 1.5rem;
+    }
+    &-next {
+      right: 0;
+      padding-left: 1.5rem;
+    }
+  }
 }
 
 .support__slider {

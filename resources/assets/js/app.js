@@ -98,11 +98,25 @@ $(function() {
 
   if ($('.support__slider').length > 0) {
     $('.support__slider').slick({
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 1,
       arrows: false,
-      fade: true
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 10000
+    });
+
+    $('body').on('click', '.support__navigation-btn-prev', function(e) {
+      e.preventDefault();
+
+      $('.support__slider').slick('slickPrev');
+    });
+
+    $('body').on('click', '.support__navigation-btn-next', function(e) {
+      e.preventDefault();
+
+      $('.support__slider').slick('slickNext');
     });
   }
 
