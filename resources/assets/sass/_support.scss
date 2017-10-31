@@ -91,4 +91,16 @@
       font-size: 1.5rem;
     }
   }
+  .support__navigation {
+    height: 44px;
+    &-btn {
+      font-size: 2rem;
+      &-prev {
+        padding-right: 1.5rem;
+      }
+      &-next {
+        padding-left: 1.5rem;
+      }
+    }
+  }
 }

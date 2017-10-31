@@ -9720,6 +9720,22 @@ body.loaded .nav {
   .support__slide-subtitle {
     font-size: 1.5rem;
   }
+
+  .support__navigation {
+    height: 44px;
+  }
+
+  .support__navigation-btn {
+    font-size: 2rem;
+  }
+
+  .support__navigation-btn-prev {
+    padding-right: 1.5rem;
+  }
+
+  .support__navigation-btn-next {
+    padding-left: 1.5rem;
+  }
 }
 
 .directions__banner {
