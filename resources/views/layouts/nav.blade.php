@@ -25,7 +25,7 @@
     <i class="nav__icon fa fa-bullhorn" aria-hidden="true"></i>
     <p class="nav__text kor-main">교회소식</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'gallery') echo 'active'; ?>" href="/gallery">
+  <a class="nav__link <?php if($active_page === 'album') echo 'active'; ?>" href="/album">
     <i class="nav__icon fa fa-camera-retro" aria-hidden="true"></i>
     <p class="nav__text kor-main">사진첩</p>
   </a>
