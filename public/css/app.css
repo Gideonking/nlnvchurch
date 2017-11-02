@@ -9610,6 +9610,42 @@ body.loaded .nav {
   }
 }
 
+.album__container {
+  padding: 10rem 0;
+}
+
+.album__card {
+  margin: 15px 0;
+}
+
+.album__card-inner {
+  background-color: #ffffff;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(125, 125, 125, 0.25);
+          box-shadow: 0px 3px 5px 0px rgba(125, 125, 125, 0.25);
+  overflow: hidden;
+  color: #333333;
+}
+
+.album__card-inner:hover,
+.album__card-inner:focus,
+.album__card-inner:active {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.album__card-content {
+  padding: 15px;
+}
+
+.album__card-content > * {
+  margin: 0;
+}
+
+.album__card-img {
+  width: 100%;
+}
+
 .support__container {
   position: relative;
   height: calc(100vh - 104px);

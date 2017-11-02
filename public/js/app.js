@@ -875,6 +875,15 @@ $(function () {
     });
   }
 
+  var $album = $('.album__wrapper').masonry({
+    itemSelector: '.album__card',
+    percentPosition: true
+  });
+
+  $album.imagesLoaded().progress(function () {
+    $album.masonry('layout');
+  });
+
   $('.js-lazy').Lazy();
 
   enter();
