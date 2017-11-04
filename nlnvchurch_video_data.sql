@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.19)
 # Database: nlnvchurch
-# Generation Time: 2017-10-26 04:28:27 +0000
+# Generation Time: 2017-11-04 16:41:23 +0000
 # ************************************************************
 
 
@@ -18,6 +18,54 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table albums
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `albums`;
+
+CREATE TABLE `albums` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `albums` WRITE;
+/*!40000 ALTER TABLE `albums` DISABLE KEYS */;
+
+INSERT INTO `albums` (`id`, `title`, `date`, `slug`, `created_at`, `updated_at`)
+VALUES
+	(1,'교회건물','20160225','building','2016-02-25 00:00:00','2016-02-25 00:00:00'),
+	(2,'마더와이즈','20160308','motherwise','2016-03-08 00:00:00','2016-03-08 00:00:00'),
+	(3,'체육대회','20160625','PE','2016-06-25 00:00:00','2016-06-25 00:00:00'),
+	(4,'한글학교 - 첫 학기','20161217','korean','2016-12-17 00:00:00','2016-12-17 00:00:00'),
+	(5,'전교인 캠핑','20170702','camping','2017-07-02 00:00:00','2017-07-02 00:00:00'),
+	(6,'한글학교 - 송편 만들기 체험','20170930','korean','2017-09-30 00:00:00','2017-09-30 00:00:00');
+
+/*!40000 ALTER TABLE `albums` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table photos
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `photos`;
+
+CREATE TABLE `photos` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo_thumbnail` int(11) NOT NULL,
+  `albums_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 
 # Dump of table series

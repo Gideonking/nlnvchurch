@@ -6,6 +6,7 @@ Route::get('/messages', 'VideoController@show');
 Route::get('/series', 'SeriesController@index');
 Route::get('/series/{series}', 'SeriesController@show');
 Route::get('/album', 'AlbumController@index');
+Route::get('/album/{albums}', 'AlbumController@show');
 Route::get('/support', function() { return view('pages.support'); });
 
 Route::get('/test', 'VideoController@store'); // For cron job later
