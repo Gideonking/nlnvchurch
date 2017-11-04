@@ -9,7 +9,7 @@
 
   <div class="album__container bg--offwhite">
     <div class="album__wrapper">
-      <div class="album__card col-md-4">
+      <div class="album__card col-xs-12 col-sm-6 col-md-4">
         <a href="#" class="album__card-inner">
           <div class="album__card-img-wrapper">
             <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
@@ -28,7 +28,7 @@
           </div>
         </a>
       </div>
-      <div class="album__card col-md-4">
+      <div class="album__card col-xs-12 col-sm-6 col-md-4">
         <a href="#" class="album__card-inner">
           <div class="album__card-img-wrapper">
             <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
@@ -47,7 +47,7 @@
           </div>
         </a>
       </div>
-      <div class="album__card col-md-4">
+      <div class="album__card col-xs-12 col-sm-6 col-md-4">
         <a href="#" class="album__card-inner">
           <div class="album__card-img-wrapper">
             <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
@@ -66,7 +66,7 @@
           </div>
         </a>
       </div>
-      <div class="album__card col-md-4">
+      <div class="album__card col-xs-12 col-sm-6 col-md-4">
         <a href="#" class="album__card-inner">
           <div class="album__card-img-wrapper">
             <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
@@ -85,7 +85,7 @@
           </div>
         </a>
       </div>
-      <div class="album__card col-md-4">
+      <div class="album__card col-xs-12 col-sm-6 col-md-4">
         <a href="#" class="album__card-inner">
           <div class="album__card-img-wrapper">
             <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
@@ -104,7 +104,7 @@
           </div>
         </a>
       </div>
-      <div class="album__card col-md-4">
+      <div class="album__card col-xs-12 col-sm-6 col-md-4">
         <a href="#" class="album__card-inner">
           <div class="album__card-img-wrapper">
             <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
