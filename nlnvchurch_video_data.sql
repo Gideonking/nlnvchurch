@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.19)
 # Database: nlnvchurch
-# Generation Time: 2017-11-04 16:57:52 +0000
+# Generation Time: 2017-11-04 17:16:53 +0000
 # ************************************************************
 
 
@@ -60,7 +60,7 @@ CREATE TABLE `photos` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `photo_thumbnail` int(11) NOT NULL,
-  `albums_id` int(11) NOT NULL,
+  `album_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -69,7 +69,7 @@ CREATE TABLE `photos` (
 LOCK TABLES `photos` WRITE;
 /*!40000 ALTER TABLE `photos` DISABLE KEYS */;
 
-INSERT INTO `photos` (`id`, `path`, `photo_thumbnail`, `albums_id`, `created_at`, `updated_at`)
+INSERT INTO `photos` (`id`, `path`, `photo_thumbnail`, `album_id`, `created_at`, `updated_at`)
 VALUES
 	(1,'1.jpg',0,1,'2017-11-04 09:45:00','2017-11-04 09:45:00'),
 	(2,'2.jpg',0,1,'2017-11-04 09:45:04','2017-11-04 09:45:04'),
