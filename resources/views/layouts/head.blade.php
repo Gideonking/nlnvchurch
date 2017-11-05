@@ -9,6 +9,7 @@
 <title>New Life New Vision Church</title>
 
 <link rel="stylesheet" href="/css/vendor/slick.css">
+<link rel="stylesheet" href="/css/vendor/magnific-popup.css">
 <link rel="stylesheet" href="/css/app.css">
 
 <script src="https://use.fontawesome.com/798a0438d6.js"></script>

@@ -875,14 +875,43 @@ $(function () {
     });
   }
 
-  var $album = $('.album__wrapper').masonry({
-    itemSelector: '.album__card',
-    percentPosition: true
-  });
+  if ($('.album__wrapper').length > 0) {
+    var $album = $('.album__wrapper').masonry({
+      itemSelector: '.album__card',
+      percentPosition: true
+    });
 
-  $album.imagesLoaded().progress(function () {
-    $album.masonry('layout');
-  });
+    $album.imagesLoaded().progress(function () {
+      $album.masonry('layout');
+    });
+  }
+
+  if ($('.photo__popup').length > 0) {
+    $('.photo__popup').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom',
+      zoom: {
+        enabled: true,
+        duration: 300,
+        easing: 'ease-in-out',
+        opener: function opener(openerElement) {
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      gallery: {
+        enabled: true
+      }
+    });
+
+    var $album = $('.photo__wrapper').masonry({
+      itemSelector: '.photo__popup',
+      percentPosition: true
+    });
+
+    $album.imagesLoaded().progress(function () {
+      $album.masonry('layout');
+    });
+  }
 
   $('.js-lazy').Lazy();
 

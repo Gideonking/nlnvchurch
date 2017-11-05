@@ -11,3 +11,4 @@
 <script src="/js/vendor/jquery-lazy.plugins.min.js" type="text/javascript"></script>
 <script src="/js/vendor/masonry.pkgd.min.js" type="text/javascript"></script>
 <script src="/js/vendor/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="/js/vendor/jquery.magnific-popup.min.js" type="text/javascript"></script>

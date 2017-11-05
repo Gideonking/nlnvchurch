@@ -9708,9 +9708,11 @@ body.loaded .nav {
 }
 
 .album__card-title {
+  color: #009B70;
   font-size: 2.5rem;
   line-height: 1.3;
   margin: 0 0 1.5rem;
+  font-weight: 600;
 }
 
 .album__card-info,
@@ -9718,6 +9720,41 @@ body.loaded .nav {
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+}
+
+.photo__banner {
+  position: relative;
+  width: 100%;
+  padding: 12rem 0 1rem;
+}
+
+.photo__container {
+  padding: 5rem 0 10rem;
+}
+
+.photo__wrapper {
+  max-width: 90%;
+  margin: auto;
+}
+
+.photo__popup {
+  width: 33.33%;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .photo__popup {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .photo__popup {
+    width: 100%;
+  }
 }
 
 .support__container {
