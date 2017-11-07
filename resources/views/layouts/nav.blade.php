@@ -7,33 +7,33 @@
 
 <div class="nav__overlay"></div>
 <nav class="nav">
-  <a class="nav__link nav__link-mobile" href="#">
+  <a class="js-transition nav__link nav__link-mobile" href="#">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </a>
-  <a class="nav__link nav__link-logo <?php if($active_page === '') echo 'active'; ?>" href="/">
+  <a class="js-transition nav__link nav__link-logo <?php if($active_page === '') echo 'active'; ?>" href="/">
     <p class="nav__text">NL<br>NV</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'about') echo 'active'; ?>" href="/about">
+  <a class="js-transition nav__link <?php if($active_page === 'about') echo 'active'; ?>" href="/about">
     <i class="nav__icon fa fa-pagelines" aria-hidden="true"></i>
     <p class="nav__text kor-main">교회소개</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'series') echo 'active'; ?>" href="/series">
+  <a class="js-transition nav__link <?php if($active_page === 'series') echo 'active'; ?>" href="/series">
     <i class="nav__icon fa fa-quote-right" aria-hidden="true"></i>
     <p class="nav__text kor-main">설교영상</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'news') echo 'active'; ?>" href="/news">
+  <a class="js-transition nav__link <?php if($active_page === 'news') echo 'active'; ?>" href="/news">
     <i class="nav__icon fa fa-bullhorn" aria-hidden="true"></i>
     <p class="nav__text kor-main">교회소식</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'album') echo 'active'; ?>" href="/album">
+  <a class="js-transition nav__link <?php if($active_page === 'album') echo 'active'; ?>" href="/album">
     <i class="nav__icon fa fa-camera-retro" aria-hidden="true"></i>
     <p class="nav__text kor-main">사진첩</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'support') echo 'active'; ?>" href="/support">
+  <a class="js-transition nav__link <?php if($active_page === 'support') echo 'active'; ?>" href="/support">
     <i class="nav__icon fa fa-heart" aria-hidden="true"></i>
     <p class="nav__text kor-main">협력/후원</p>
   </a>
-  <a class="nav__link <?php if($active_page === 'directions') echo 'active'; ?>" href="/directions">
+  <a class="js-transition nav__link <?php if($active_page === 'directions') echo 'active'; ?>" href="/directions">
     <i class="nav__icon fa fa-map-signs" aria-hidden="true"></i>
     <p class="nav__text kor-main">찾아오시는길</p>
   </a>

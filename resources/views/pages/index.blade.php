@@ -32,7 +32,7 @@
     <div class="home__container home__message clearfix">
       <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <h2 class="home__message-title">주일 설교영상</h2>
-        <a class="home__message-btn kor-main" href="/series"><i class="fa fa-film" aria-hidden="true"></i> 영상 더보기</a>
+        <a class="home__message-btn kor-main js-transition" href="/series"><i class="fa fa-film" aria-hidden="true"></i> 영상 더보기</a>
         <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvid->video_id }}?rel=0" frameborder="0" allowfullscreen></iframe>
         <hr class="divider divider--green">
         <div class="home__message-desc text-center kor-main">
@@ -44,65 +44,34 @@
 
   <div class="home__container home__container--blue clearfix">
     <div class="col-md-12 col-lg-10 col-lg-offset-1 text-center">
-      <h2 class="nlnv__heading">교회 행사</h2>
+      <h2 class="nlnv__heading">교회 소식</h2>
       <hr class="divider divider--gold divider--margin-b-lg">
-      {{-- Single Event Card 1 --}}
-      <div class="card__col col-sm-6 col-md-4">
-        <div class="card__container">
-          <div class="card__thumbnail">
-            <div class="card__image" style="background-image: url(images/events/korean-school.jpg);"></div>
-          </div>
-          <div class="card__content">
-            <div class="card__category">9.23.2017</div>
-            <h1 class="card__title kor-main">NLNV 한글학교</h1>
-            <h2 class="card__subtitle">Fall 2017 Class Begins!</h2>
-            <div class="card__description">
-              <p class="kor-main">매주 토요일 9:30AM - 11:30AM</p>
+      @foreach($featured_news as $news)
+        <div class="card__col col-sm-6 col-md-4">
+          <div class="card__container">
+            <div class="card__thumbnail">
+              <div class="card__image" style="background-image: url(images/news/{{ $news->image }});"></div>
             </div>
-            <div class="card__cta">
-              <a class="card__btn kor-main" href="#"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{-- Single Event Card 2 --}}
-      <div class="card__col col-sm-6 col-md-4">
-        <div class="card__container">
-          <div class="card__thumbnail">
-            <div class="card__image" style="background-image: url(images/events/homeless-ministry.jpg);"></div>
-          </div>
-          <div class="card__content">
-            <div class="card__category">Daily</div>
-            <h1 class="card__title kor-main">홈리스 사역</h1>
-            <h2 class="card__subtitle">Share the love of God.</h2>
-            <div class="card__description">
-              <p class="kor-main">홈리스 사역은 홈리스들의 영적인 갈급함을 풀어줌으로 인하여 그들의 삶의 목적이 바뀌어 세상에 빛과 소금과 같은 존재로 바뀔 수 있도록 도와주는 사역입니다.</p>
-            </div>
-            <div class="card__cta">
-              <a class="card__btn kor-main" href="#"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
+            <div class="card__content">
+              <div class="card__category">{{ $news->date }}</div>
+              <h1 class="card__title kor-main">{{ $news->title }}</h1>
+              <h2 class="card__subtitle">{{ $news->subtitle }}</h2>
+              <div class="card__description">
+                <p class="kor-main">{{ $news->description }}</p>
+              </div>
+              <div class="card__cta">
+                <a class="card__btn kor-main open-popup-link" href="#popup-{{ $news->id }}"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {{-- Single Event Card 3 --}}
-      <div class="card__col col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
-        <div class="card__container">
-          <div class="card__thumbnail">
-            <div class="card__image" style="background-image: url(images/events/read-bible.jpg);"></div>
-          </div>
-          <div class="card__content">
-            <div class="card__category">Daily</div>
-            <h1 class="card__title kor-main">함께 성경읽기</h1>
-            <h2 class="card__subtitle">Read the word of God.</h2>
-            <div class="card__description">
-              <p class="kor-main">매일 하루에 3장씩 성경을 읽으므로 하나님의 말씀을 사모합시다.</p>
-            </div>
-            <div class="card__cta">
-              <a class="card__btn kor-main" href="#"><i class="fa fa-search" aria-hidden="true"></i> 자세히보기</a>
-            </div>
-          </div>
+        <div id="popup-{{ $news->id }}" class="white-popup mfp-hide">
+          <h2 class="nlnv__heading margin-top-xs">{{ $news->title }}</h2>
+          <img class="margin-top-sm margin-bottom-xs" src="images/news/{{ $news->image }}" alt="">
+          <h3>{{ $news->description }}</h3>
+          <h4 class="margin-top-sm margin-bottom-md text-line-height-15">{!! implode('<h4 class="margin-top-sm margin-bottom-md text-line-height-15">', array_filter(explode("\n", $news->details))) !!}</h4>
         </div>
-      </div>
+      @endforeach
     </div>
   </div>
 

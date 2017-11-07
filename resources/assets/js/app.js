@@ -158,6 +158,13 @@ $(function() {
     });
   }
 
+  if ($('.open-popup-link').length > 0) {
+    $('.open-popup-link').magnificPopup({
+      type:'inline',
+      midClick: true
+    });
+  }
+
   $('.js-lazy').Lazy();
 
   enter();
@@ -169,7 +176,7 @@ $(function() {
     $('.nav__overlay').toggleClass('opened');
   });
 
-  $('body').on('click', '.nav__link', function(e) {
+  $('body').on('click', '.js-transition', function(e) {
     var that = this;
 
     e.preventDefault();

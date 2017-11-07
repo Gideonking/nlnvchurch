@@ -6,7 +6,7 @@
     <h2 class="nlnv__heading">{{ $section_title }}</h2>
     <hr class="divider divider--green margin-bottom-lg">
     <div class="col-md-12 margin-bottom-lg">
-      <a class="nlnv__btn kor-main margin-top-none" href="/series"><i class="fa fa-chevron-left" aria-hidden="true"></i> 다른 시리즈 보기</a>
+      <a class="nlnv__btn kor-main margin-top-none js-transition" href="/series"><i class="fa fa-chevron-left" aria-hidden="true"></i> 다른 시리즈 보기</a>
     </div>
     <div class="col-md-6 margin-top-sm margin-bottom-lg">
       <div class="col-md-12">

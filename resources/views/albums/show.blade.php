@@ -5,7 +5,7 @@
   <div class="photo__banner text-center bg--offwhite">
     <h1 class="nlnv__heading kor-main">{{ $album_title }}</h1>
     <hr class="divider divider--green">
-    <a class="nlnv__btn kor-main margin-top-none" href="/album"><i class="fa fa-chevron-left" aria-hidden="true"></i> 돌아가기</a>
+    <a class="nlnv__btn kor-main margin-top-none js-transition" href="/album"><i class="fa fa-chevron-left" aria-hidden="true"></i> 돌아가기</a>
   </div>
 
   <div class="photo__container bg--offwhite">

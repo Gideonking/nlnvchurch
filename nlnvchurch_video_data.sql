@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.19)
 # Database: nlnvchurch
-# Generation Time: 2017-11-04 17:16:53 +0000
+# Generation Time: 2017-11-07 06:15:30 +0000
 # ************************************************************
 
 
@@ -48,6 +48,38 @@ VALUES
 	(6,'한글학교 - 송편 만들기 체험','20170930','korean','2017-09-30 00:00:00','2017-09-30 00:00:00');
 
 /*!40000 ALTER TABLE `albums` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table news
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `news`;
+
+CREATE TABLE `news` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `featured` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `news` WRITE;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+
+INSERT INTO `news` (`id`, `image`, `title`, `subtitle`, `description`, `details`, `date`, `featured`, `created_at`, `updated_at`)
+VALUES
+	(1,'read-bible.jpg','함께 성경읽기','Read the word of God.','매일 하루에 3장씩 성경을 읽으므로 하나님의 말씀을 사모합시다.','함께 성경읽기 (3장/day)\n11/6(월) - 11/12(주일)\n레위기 26장 - 민수기 19장','Daily',1,'2017-11-06 21:23:03','2017-11-06 21:23:03'),
+	(2,'homeless-ministry.jpg','홈리스 사역','Share the love of God.','홈리스 사역은 홈리스들의 영적인 갈급함을 풀어줌으로 인하여 그들의 삶의 목적이 바뀌어 세상에 빛과 소금과 같은 존재로 바뀔 수 있도록 도와주는 사역입니다.','물품: Canned Foods, Cereal, 물, 등등','Daily',1,'2017-11-06 21:23:53','2017-11-06 21:23:53'),
+	(3,'korean-school.jpg','NLNV 한글학교','Fall 2017 Class Begins!','매주 토요일 9:30AM - 11:30AM','New Life New Vision Korean School designed for those who have no prior (or very limited) knowledge in Korean. There is no restrictive age limitation but if you are under the age of 12, we would recommend you to take different Korean course that we have. Our church divided 3 different levels of Korean classes. There is Kids School (age 5-7), Children School (age 8-12), and Korean language course (age 13 & above). For details regarding Korean School, please contact or visit us anytime you are available.','9.23.2017',1,'2017-11-06 21:24:36','2017-11-06 21:24:36');
+
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
 

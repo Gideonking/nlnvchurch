@@ -8,7 +8,7 @@
       <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $messages[0]->video_id }}?rel=0" frameborder="0" allowfullscreen></iframe>
       @if(!is_null($series))
         <div class="text-center">
-          <a class="home__message-series nlnv__btn kor-main" href="/series/{{ $series->id }}"><i class="fa fa-hashtag" aria-hidden="true"></i> <span class="home__message-series-title">{{ $series->title }} 시리즈 더보기</span></a>
+          <a class="home__message-series nlnv__btn kor-main js-transition" href="/series/{{ $series->id }}"><i class="fa fa-hashtag" aria-hidden="true"></i> <span class="home__message-series-title">{{ $series->title }} 시리즈 더보기</span></a>
         </div>
       @endif
       <hr class="divider divider--green">
