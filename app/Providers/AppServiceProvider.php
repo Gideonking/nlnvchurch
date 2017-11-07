@@ -14,10 +14,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('layouts.sidebar', function($view) {
-          $archives = \App\Post::archives();
-          $tags = \App\Tag::has('posts')->pluck('name');
-          $view->with(compact('archives', 'tags'));
+        view()->composer('news.cards', function($view) {
+          if(\Route::is('home'))
+          {
+            $featured_news = \App\News::getFeatured();
+          }
+          elseif (\Route::is('news'))
+          {
+            $featured_news = \App\News::latest()->get();
+          }
+          else
+          {
+            $featured_news = \App\News::getFeatured();
+          }
+          $view->with(compact('featured_news'));
         });
     }
 

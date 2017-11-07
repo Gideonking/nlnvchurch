@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Video;
-use App\News;
 use Carbon\Carbon;
 
 class WelcomeController extends Controller
 {
-  public function index(Video $video, News $news)
+  public function index(Video $video)
   {
     $ytvid = $video->latestVideo();
 
@@ -20,8 +19,6 @@ class WelcomeController extends Controller
       $ytvid_description = '<p>' . implode('</p><p>', array_filter(explode("\n", $ytvid->video_description))) . '</p><p>' . $ytvid_time . '</p>';
     }
 
-    $featured_news = $news->getFeatured();
-
-    return view('pages.index', compact('ytvid', 'ytvid_description', 'featured_news'));
+    return view('pages.index', compact('ytvid', 'ytvid_description'));
   }
 }
