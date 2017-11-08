@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\News;
+use App\Bulletin;
 
 class NewsController extends Controller
 {
-  public function index(News $news)
+  public function index()
   {
-    return view('news.index');
+    $bulletins = Bulletin::recentBulletins();
+    return view('news.index', compact('bulletins'));
   }
 }

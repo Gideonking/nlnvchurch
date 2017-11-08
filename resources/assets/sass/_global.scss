@@ -150,6 +150,9 @@ body.loaded {
   &-line-height-15 {
     line-height: 1.5;
   }
+  &-bold {
+    font-weight: 600;
+  }
   &-link {
     color: currentColor;
     text-decoration: underline;
@@ -159,6 +162,9 @@ body.loaded {
     &--nounderline {
       text-decoration: none;
     }
+  }
+  &--white {
+    color: $white;
   }
   &--gold {
     color: $gold;
@@ -232,6 +238,12 @@ body.loaded {
   }
   &--darkgrey {
     background-color: $darkgrey;
+  }
+  &--green {
+    background-color: $green;
+  }
+  &--darkgreen {
+    background-color: $darkgreen;
   }
 }
 

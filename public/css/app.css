@@ -8515,6 +8515,10 @@ body.loaded .nlnv__container {
   line-height: 1.5;
 }
 
+.text-bold {
+  font-weight: 600;
+}
+
 .text-link {
   color: currentColor;
   text-decoration: underline;
@@ -8526,6 +8530,10 @@ body.loaded .nlnv__container {
 
 .text-link--nounderline {
   text-decoration: none;
+}
+
+.text--white {
+  color: #ffffff;
 }
 
 .text--gold {
@@ -8602,6 +8610,14 @@ body.loaded .nlnv__container {
 
 .bg--darkgrey {
   background-color: #333333;
+}
+
+.bg--green {
+  background-color: #00C28C;
+}
+
+.bg--darkgreen {
+  background-color: #009B70;
 }
 
 .accent--light {
@@ -9630,6 +9646,90 @@ body.loaded .nav {
   }
 }
 
+.news__banner {
+  position: relative;
+  width: 100%;
+  padding: 12rem 0 1rem;
+}
+
+.news__container {
+  padding: 5rem 0 10rem;
+}
+
+.bulletin__card {
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 5.85rem;
+}
+
+.bulletin__card-img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 0;
+  position: relative;
+  max-width: 100%;
+}
+
+.bulletin__card-img-wrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  z-index: 1;
+}
+
+.bulletin__card-img-wrap:hover,
+.bulletin__card-img-wrap:focus,
+.bulletin__card-img-wrap:active {
+  text-decoration: none;
+  color: #333333;
+}
+
+.bulletin__card-img-wrap:hover .bulletin__card-icon,
+.bulletin__card-img-wrap:focus .bulletin__card-icon,
+.bulletin__card-img-wrap:active .bulletin__card-icon {
+  opacity: 1;
+}
+
+.bulletin__card-img-wrap:hover:before,
+.bulletin__card-img-wrap:focus:before,
+.bulletin__card-img-wrap:active:before {
+  opacity: 1;
+  border-width: 7px;
+}
+
+.bulletin__card-icon.fa {
+  position: absolute;
+  z-index: 2;
+  font-size: 5rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  color: #333333;
+}
+
+.bulletin__card-title {
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 0.8rem;
+  padding: 0 10px;
+  text-decoration: none;
+  letter-spacing: -0.4px;
+}
+
 .album__banner {
   position: relative;
   width: 100%;
@@ -10106,9 +10206,9 @@ body.loaded .nav {
   display: block;
   background: #ffffff;
   height: 470px;
-  margin-bottom: 2rem;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
@@ -10148,8 +10248,8 @@ body.loaded .nav {
   padding: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-  transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05);
+  transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05);
 }
 
 .card__category {

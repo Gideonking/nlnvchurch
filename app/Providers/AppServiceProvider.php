@@ -15,13 +15,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('news.cards', function($view) {
-          if(\Route::is('home'))
+          if (\Request::is('news'))
           {
-            $featured_news = \App\News::getFeatured();
-          }
-          elseif (\Route::is('news'))
-          {
-            $featured_news = \App\News::latest()->get();
+            $featured_news = \App\News::getAllActive();
           }
           else
           {

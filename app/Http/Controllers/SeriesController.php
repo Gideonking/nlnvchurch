@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Series;
+use App\Video;
 use Carbon\Carbon;
 
 class SeriesController extends Controller
@@ -12,7 +13,7 @@ class SeriesController extends Controller
   {
     $section_title = '설교 시리즈';
     $series = Series::latest()->get();
-    $first_message = $series->first()->videos->first();
+    $first_message = Video::latest()->first();
     $first_message_date = Carbon::parse($first_message->video_date);
     $first_message_date = $first_message_date->toFormattedDateString();
 

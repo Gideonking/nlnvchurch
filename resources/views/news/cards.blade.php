@@ -18,9 +18,9 @@
     </div>
   </div>
   <div id="popup-{{ $news->id }}" class="white-popup mfp-hide">
-    <h2 class="nlnv__heading margin-top-xs">{{ $news->title }}</h2>
+    <h2 class="nlnv__heading margin-top-xs kor-main">{{ $news->title }}</h2>
     <img class="margin-top-sm margin-bottom-xs" src="images/news/{{ $news->image }}" alt="">
-    <h3>{{ $news->description }}</h3>
-    <h4 class="margin-top-sm margin-bottom-md text-line-height-15">{!! implode('<h4 class="margin-top-sm margin-bottom-md text-line-height-15">', array_filter(explode("\n", $news->details))) !!}</h4>
+    <h4 class="kor-main text-bold text-line-height-15">{{ $news->description }}</h4>
+    <p class="margin-top-sm margin-bottom-md text-line-height-15 kor-main">{!! implode('<p class="margin-top-sm margin-bottom-md text-line-height-15 kor-main">', array_filter(explode("\n", $news->details))) !!}</p>
   </div>
 @endforeach
