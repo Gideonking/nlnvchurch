@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.19)
 # Database: nlnvchurch
-# Generation Time: 2017-11-13 02:08:00 +0000
+# Generation Time: 2017-11-13 07:03:28 +0000
 # ************************************************************
 
 
@@ -49,7 +49,7 @@ VALUES
 	(7,'2017년 마더와이즈','20170924','motherwise','2017-09-24 17:31:50','2017-09-24 17:31:50'),
 	(8,'한글학교 - 송편 만들기 체험','20170930','korean','2017-09-30 00:00:00','2017-09-30 00:00:00'),
 	(9,'주일학교 - 2017년 9월','20170930','sundayschool','2017-09-30 17:49:26','2017-09-30 17:49:26'),
-	(10,'세례','20171001','baptism','2017-10-01 17:40:33','2017-10-01 17:40:33'),
+	(10,'침례','20171001','baptism','2017-10-01 17:40:33','2017-10-01 17:40:33'),
 	(11,'주일학교 - 2017년 10월','20171029','sundayschool','2017-10-29 17:57:00','2017-10-29 17:57:00'),
 	(12,'예배현황 - 2017년 10월','20171029','worship','2017-10-29 18:01:23','2017-10-29 18:01:23');
 
@@ -137,7 +137,7 @@ LOCK TABLES `news` WRITE;
 
 INSERT INTO `news` (`id`, `image`, `title`, `subtitle`, `description`, `details`, `date`, `featured`, `active`, `created_at`, `updated_at`)
 VALUES
-	(1,'read-bible.jpg','함께 성경읽기','Read the word of God.','매일 하루에 3장씩 성경을 읽으므로 하나님의 말씀을 사모합시다.','함께 성경읽기 (3장/day)\n11/6(월) - 11/12(주일)\n레위기 26장 - 민수기 19장','Daily',1,1,'2017-11-06 21:23:03','2017-11-06 21:23:03'),
+	(1,'read-bible.jpg','함께 성경읽기','Read the word of God.','매일 하루에 3장씩 성경을 읽으므로 하나님의 말씀을 사모합시다.','함께 성경읽기 (3장/day)\n11/13(월) - 11/19(주일)\n민수기 20장 - 신명기 4장','Daily',1,1,'2017-11-06 21:23:03','2017-11-06 21:23:03'),
 	(2,'homeless-ministry.jpg','홈리스 사역','Share the love of God.','홈리스 사역은 홈리스들의 영적인 갈급함을 풀어줌으로 인하여 그들의 삶의 목적이 바뀌어 세상에 빛과 소금과 같은 존재로 바뀔 수 있도록 도와주는 사역입니다.','물품: Canned Foods, Cereal, 물, 등등','Daily',0,1,'2017-11-06 21:23:53','2017-11-06 21:23:53'),
 	(3,'korean-school.jpg','NLNV 한글학교','Fall 2017 Class Begins!','매주 토요일 9:30AM - 11:30AM','New Life New Vision Korean School designed for those who have no prior (or very limited) knowledge in Korean. There is no restrictive age limitation but if you are under the age of 12, we would recommend you to take different Korean course that we have. Our church divided 3 different levels of Korean classes. There is Kids School (age 5-7), Children School (age 8-12), and Korean language course (age 13 & above). For details regarding Korean School, please contact or visit us anytime you are available.','9.23.2017',1,1,'2017-11-06 21:24:36','2017-11-06 21:24:36'),
 	(4,'3rd-anniversary.jpg','창립 3주년 기념예배','추수 감사주일 초청 잔치','한 사람 / 한 가정 초대하기','11/19 (주일) 2부예배','11.19.2017',1,1,'2017-11-07 09:52:17','2017-11-07 09:52:19');
