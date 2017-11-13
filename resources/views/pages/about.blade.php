@@ -37,10 +37,10 @@
   		<li class="about__tab-content about__tab-content--pastor">
   			<div class="about__tab-content-wrapper kor-main">
           <div class="row">
-            <div class="col-md-3 col-md-offset-2">
+            <div class="col-md-6 col-md-offset-3">
               <img class="about__tab-image margin-bottom-xl" src="images/about/nlnv-about-pastor.jpg" alt="">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6 col-md-offset-3">
               <p class="nlnv__subheading divider--wrap text--gold">환영합니다!</p>
               <div class="about__tab-introduction">
                 <p>New Life New Vision 교회를 방문해 주시는 여러분 모두를 환영합니다.</p>
@@ -70,7 +70,7 @@
             </div>
             <div class="col-md-4">
               <img class="about__tab-image" src="images/about/about-missionary.jpg" alt="">
-              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">섬김/행동 전도사</p>
+              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">섬김/행정 전도사</p>
               <div class="about__tab-introduction margin-bottom-lg-max-desktop">
                 <p>황수용</p>
                 <a class="about__tab-icon text-link" href="mailto:sooyong1982@naver.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
@@ -78,7 +78,7 @@
             </div>
             <div class="col-md-4">
               <img class="about__tab-image" src="images/about/about-secretary.jpg" alt="">
-              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">교육부 간사</p>
+              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">교육부 전도사</p>
               <div class="about__tab-introduction">
                 <p>함경수</p>
                 <a class="about__tab-icon text-link" href="mailto:hamks@yahoo.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
@@ -105,14 +105,14 @@
     <div class="col-md-4 col-sm-6 about__card about__card--disciple">
       <h3 class="nlnv__heading--sm kor-main">제자의 삷</h3>
       <hr class="divider divider--blue">
-      <p class="about__card-info kor-main">매주 (토)</p>
-      <p class="about__card-info kor-main">9:30-11:30AM 교회</p>
+      <p class="about__card-info kor-main">매주 (주일)</p>
+      <p class="about__card-info kor-main">2:00-3:30AM 교회</p>
     </div>
     <div class="col-md-4 col-sm-6 about__card about__card--bible">
       <h3 class="nlnv__heading--sm kor-main">성경 통독</h3>
       <hr class="divider divider--blue">
       <p class="about__card-info kor-main">매주 (금)</p>
-      <p class="about__card-info kor-main">7:00-9:00PM 교회</p>
+      <p class="about__card-info kor-main">목장별</p>
     </div>
     <div class="col-md-4 col-sm-6 about__card about__card--pray">
       <h3 class="nlnv__heading--sm kor-main">중보 기도</h3>
