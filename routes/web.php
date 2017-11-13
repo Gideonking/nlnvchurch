@@ -10,5 +10,3 @@ Route::get('/bulletins', 'BulletinController@index');
 Route::get('/album', 'AlbumController@index');
 Route::get('/album/{album}', 'AlbumController@show');
 Route::get('/support', function() { return view('pages.support'); });
-
-Route::get('/test', 'VideoController@store'); // For cron job later
