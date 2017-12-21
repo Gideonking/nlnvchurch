@@ -18,7 +18,7 @@
           <a href="/album/{{ $album->id }}" class="album__card-inner js-transition">
             <div class="album__card-img-wrapper">
               <i class="album__card-icon fa fa-picture-o" aria-hidden="true"></i>
-              <img class="album__card-img" src="/images/albums/{{ $album->date . $album->slug }}/{{ $photo_thumbnail }}" alt="">
+              <img class="album__card-img js-lazy" src="/images/albums/{{ $album->date . $album->slug }}/{{ $photo_thumbnail }}" alt="">
             </div>
             <div class="album__card-content">
               <h2 class="album__card-title kor-main">{{ $album->title }}</h2>

@@ -118,7 +118,7 @@
       <h3 class="nlnv__heading--sm kor-main">중보 기도</h3>
       <hr class="divider divider--blue">
       <p class="about__card-info kor-main">매주 (수)</p>
-      <p class="about__card-info kor-main">6:30-7:30PM 본당</p>
+      <p class="about__card-info kor-main">7:00PM 본당</p>
     </div>
     <div class="col-md-4 col-sm-6 about__card about__card--school">
       <h3 class="nlnv__heading--sm kor-main">한글 학교</h3>
