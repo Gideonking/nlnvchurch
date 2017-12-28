@@ -3,16 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Bulletin extends Model
 {
   public static function recentBulletins()
   {
-    return Bulletin::latest()->limit(6)->get();
+    $nowInLA = Carbon::today('America/Los_Angeles');
+    return Bulletin::latest()->limit(8)->where('created_at', '<', $nowInLA)->get();
   }
 
   public static function getAllBulletins()
   {
-    return Bulletin::latest()->get();
+    $nowInLA = Carbon::today('America/Los_Angeles');
+    return Bulletin::latest()->where('created_at', '<', $nowInLA)->get();
   }
 }
