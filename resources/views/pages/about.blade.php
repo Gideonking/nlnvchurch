@@ -59,16 +59,24 @@
   		<li class="about__tab-content about__tab-content--leader">
   			<div class="about__tab-content-wrapper kor-main">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <img class="about__tab-image" src="images/about/about-pastor.jpg" alt="">
-              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">담임목사</p>
+              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">담임 목사</p>
               <div class="about__tab-introduction margin-bottom-lg-max-desktop">
                 <p>피터 최 (Peter B. Choi)</p>
                 <a class="about__tab-icon text-link margin-right-sm" href="mailto:pbochoi@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 <a class="about__tab-icon text-link" href="tel:3109916544"><i class="fa fa-phone" aria-hidden="true"></i></a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+              <img class="about__tab-image" src="images/about/about-co-pastor.jpg" alt="">
+              <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">협동 목사</p>
+              <div class="about__tab-introduction margin-bottom-lg-max-desktop">
+                <p>이충원</p>
+                <a class="about__tab-icon text-link" href="mailto:choongwon.lee7@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div class="col-md-3">
               <img class="about__tab-image" src="images/about/about-missionary.jpg" alt="">
               <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">섬김/행정 전도사</p>
               <div class="about__tab-introduction margin-bottom-lg-max-desktop">
@@ -76,7 +84,7 @@
                 <a class="about__tab-icon text-link" href="mailto:sooyong1982@naver.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <img class="about__tab-image" src="images/about/about-secretary.jpg" alt="">
               <p class="nlnv__subheading divider--wrap text--gold margin-top-sm">교육부 전도사</p>
               <div class="about__tab-introduction">

@@ -17,7 +17,7 @@
       <h2 class="nlnv__heading kor-main">예배 안내</h2>
       <hr class="divider divider--green">
       <p class="home__service-times kor-main"><b>주일예배:</b> 10:00AM (1부) &amp; 12:00PM (2부)</p>
-      <p class="home__service-times kor-main"><b>Sunday School:</b> 12:00PM</p>
+      <p class="home__service-times kor-main"><b>Sunday School:</b> 11:30AM</p>
       <p class="home__service-times kor-main"><b>수요기도회:</b> 7:00PM</p>
       <p class="home__service-times kor-main"><b>새벽기도회:</b> 5:30AM (화-금) &amp; 6:30AM (토)</p>
       <div class="home__join">
