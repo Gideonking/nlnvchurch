@@ -53,19 +53,20 @@ class cronVideo extends Command
       $youtube_video_activity = $youtube_result['snippet']['type'];
 
       if ($youtube_video_activity === 'upload') {
-        $youtube_video_id = $youtube_result['contentDetails']['upload']['videoId'];
-        $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_result['snippet']['description']);
-        $youtube_video_date = substr($youtube_result['snippet']['title'], 0, 8);
+        if (strpos($youtube_result['snippet']['description'], '5min') !== false) {
+          $youtube_video_id = $youtube_result['contentDetails']['upload']['videoId'];
+          $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_result['snippet']['description']);
+          $youtube_video_date = substr($youtube_result['snippet']['title'], 0, 8);
 
-        $video_id = Video::pluck('video_id')->last();
+          $video_id = Video::pluck('video_id')->last();
 
-        if ($youtube_video_id !== $video_id)
-        {
-          $video->addNewVideo(
-            $youtube_video_id,
-            $youtube_video_description,
-            $youtube_video_date
-          );
+          if ($youtube_video_id !== $video_id) {
+            $video->addNewVideo(
+              $youtube_video_id,
+              $youtube_video_description,
+              $youtube_video_date
+            );
+          }
         }
       }
     }
