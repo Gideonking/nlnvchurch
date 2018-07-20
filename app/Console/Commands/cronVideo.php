@@ -42,31 +42,27 @@ class cronVideo extends Command
 
       curl_setopt_array($curl, array(
           CURLOPT_RETURNTRANSFER => 1,
-          CURLOPT_URL => 'https://www.googleapis.com/youtube/v3/activities?key=' . env('GOOGLE_API_KEY') . '&channelId=UCdmLI5xDRzZmNVAch8HCyGg&part=contentDetails,snippet&order=date&maxResults=1'
+          CURLOPT_URL => 'https://www.googleapis.com/youtube/v3/activities?key=' . env('GOOGLE_API_KEY') . '&channelId=UCdmLI5xDRzZmNVAch8HCyGg&part=contentDetails,snippet&order=date&maxResults=2'
       ));
 
       $res = curl_exec($curl);
       curl_close($curl);
+
+      $latest_videos = Video::orderBy('id', 'desc')->limit(5)->pluck('id');
       $youtube_results = json_decode($res, true);
-      $youtube_result = $youtube_results['items'][0];
+      $youtube_videos = $youtube_results['items'];
 
-      $youtube_video_activity = $youtube_result['snippet']['type'];
-
-      if ($youtube_video_activity === 'upload') {
-        if (strpos($youtube_result['snippet']['description'], '5min') !== false) {
-          $youtube_video_id = $youtube_result['contentDetails']['upload']['videoId'];
-          $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_result['snippet']['description']);
-          $youtube_video_date = substr($youtube_result['snippet']['title'], 0, 8);
-
-          $video_id = Video::pluck('video_id')->last();
-
-          if ($youtube_video_id !== $video_id) {
-            $video->addNewVideo(
-              $youtube_video_id,
-              $youtube_video_description,
-              $youtube_video_date
-            );
-          }
+      foreach ($youtube_videos as $youtube_video) {
+        $youtube_video_type = $youtube_video['snippet']['type'];
+        $youtube_video_id = $youtube_video['contentDetails']['upload']['videoId'];
+        $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_video['snippet']['description']);
+        $youtube_video_date = substr($youtube_video['snippet']['title'], 0, 8);
+        if ($youtube_video_type === 'upload' && !in_array($youtube_video_id, $latest_videos) && strpos($youtube_video_description, '5min') === false) {
+          $video->addNewVideo(
+            $youtube_video_id,
+            $youtube_video_description,
+            $youtube_video_date
+          );
         }
       }
     }
