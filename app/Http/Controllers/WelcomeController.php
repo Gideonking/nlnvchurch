@@ -10,7 +10,12 @@ class WelcomeController extends Controller
 {
   public function index(Video $video)
   {
-    $ytvid = $video->latestVideo();
+    $ytvid = $video->latestShortVideo();
+    $ytvidBackUp = $video->latestLongVideo();
+
+    if ($ytvid->full_id !== $ytvidBackUp->id) {
+      $ytvid = $video->latestVideo();
+    }
 
     if ($ytvid !== NULL)
     {

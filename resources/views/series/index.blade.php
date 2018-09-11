@@ -18,9 +18,15 @@
         @if(!is_null($first_message->series))
           <a class="nlnv__btn kor-main js-transition" href="/series/{{ $first_message->series->id }}"><i class="fa fa-hashtag" aria-hidden="true"></i> {{ $first_message->series->title }} 시리즈 더보기</a>
         @endif
-        <div>
-          <a class="nlnv__btn nlnv__btn--solid kor-main js-transition" href="/messages"><i class="fa fa-hashtag" aria-hidden="true"></i> 모든 영상 보기</a>
+        @if($first_message->series->id !== 1)
+          <div>
+            <a class="nlnv__btn nlnv__btn--solid kor-main js-transition" href="/messages"><i class="fa fa-hashtag" aria-hidden="true"></i> 모든 영상 보기</a>
         </div>
+        @else
+          <div>
+          <a class="nlnv__btn nlnv__btn--solid kor-main js-transition" href="/messages/{{$first_message->full_id}}"><i class="fa fa-hashtag" aria-hidden="true"></i> FULL 영상 보기</a>
+          </div>
+        @endif
       </div>
     </div>
   </div>
@@ -32,6 +38,7 @@
     </div>
     <div class="col-md-12 col-md-offset-0 col-lg-10 col-lg-offset-1">
       @foreach($series as $single_series)
+        @if (count($single_series->videos) > 0)
           <div class="col-sm-6 col-md-4 messages__card">
             <a class="js-lazy messages__card-inner js-transition" data-src="https://i.ytimg.com/vi/{{ $single_series->videos->first()->video_id }}/maxresdefault.jpg" href="/series/{{ $single_series->id }}">
               <div class="messages__card-content">
@@ -46,6 +53,7 @@
               </div>
             </a>
           </div>
+        @endif
       @endforeach
     </div>
   </div>

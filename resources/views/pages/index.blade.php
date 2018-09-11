@@ -17,7 +17,8 @@
       <h2 class="nlnv__heading kor-main">예배 안내</h2>
       <hr class="divider divider--green">
       <p class="home__service-times kor-main"><b>주일예배:</b> 10:00AM (1부) &amp; 12:00PM (2부)</p>
-      <p class="home__service-times kor-main"><b>Sunday School:</b> 11:30AM</p>
+      <p class="home__service-times kor-main"><b>Sunday School:</b> 12:30PM</p>
+      <p class="home__service-times kor-main"><b>Youth Group:</b> 11:45AM</p>
       <p class="home__service-times kor-main"><b>수요기도회:</b> 7:00PM</p>
       <p class="home__service-times kor-main"><b>새벽기도회:</b> 5:30AM (화-금) &amp; 6:30AM (토)</p>
       <div class="home__join">
@@ -32,8 +33,13 @@
   @if($ytvid)
     <div class="home__container home__message clearfix">
       <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <h2 class="home__message-title">주일 설교영상</h2>
-        <a class="home__message-btn kor-main js-transition" href="/series"><i class="fa fa-film" aria-hidden="true"></i> 영상 더보기</a>
+        @if($ytvid->series_id !== 1)
+          <h2 class="home__message-title">주일 설교영상</h2>
+          <a class="home__message-btn kor-main js-transition" href="/series"><i class="fa fa-film" aria-hidden="true"></i> 영상 더보기</a>
+        @else
+          <h2 class="home__message-title">5분 설교영상</h2>
+          <a class="home__message-btn kor-main js-transition" href="/messages/{{$ytvid->full_id}}"><i class="fa fa-film" aria-hidden="true"></i> FULL 영상 보기</a>
+        @endif
         <iframe class="home__message-iframe" width="100%" height="500" src="https://www.youtube.com/embed/{{ $ytvid->video_id }}?rel=0" frameborder="0" allowfullscreen></iframe>
         <hr class="divider divider--green">
         <div class="home__message-desc text-center kor-main">

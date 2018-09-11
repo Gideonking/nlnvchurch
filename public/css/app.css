@@ -9099,6 +9099,10 @@ body.loaded .nav {
   height: 400px;
 }
 
+.home__message--single {
+  min-height: calc(100vh - 104px);
+}
+
 @media screen and (max-width: 768px) {
   .home__banner-arrow {
     display: block;

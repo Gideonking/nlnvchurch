@@ -20,6 +20,7 @@ class CreateVideosTable extends Migration
             $table->string('video_date');
             $table->timestamps();
             $table->integer('series_id')->nullable();
+            $table->integer('full_id')->nullable();
         });
     }
 

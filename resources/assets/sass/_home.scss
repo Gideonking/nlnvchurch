@@ -188,6 +188,9 @@
   &-iframe--sm {
     height: 400px;
   }
+  &--single {
+    min-height: calc(100vh - 104px);
+  }
 }
 
 @media screen and (max-width: 768px) {

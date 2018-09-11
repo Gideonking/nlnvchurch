@@ -52,19 +52,59 @@ class cronVideo extends Command
       $youtube_results = json_decode($res, true);
       $youtube_videos = $youtube_results['items'];
 
+      $full_id = null;
+      $is_saved_5min = false;
+      $youtube_video_id_5min = null;
+      $youtube_video_description_5min = null;
+      $youtube_video_date_5min = null;
+
       foreach ($youtube_videos as $youtube_video) {
-        $youtube_video_type = $youtube_video['snippet']['type'];
-        $youtube_video_id = $youtube_video['contentDetails']['upload']['videoId'];
-        $youtube_video_title = $youtube_video['snippet']['title'];
-        $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_video['snippet']['description']);
-        $youtube_video_date = substr($youtube_video['snippet']['title'], 0, 8);
-        if ($youtube_video_type === 'upload' && !in_array($youtube_video_id, $latest_videos) && strpos($youtube_video_title, '5min') === false) {
+          global $full_id;
+          global $is_saved_5min;
+          global $youtube_video_id_5min;
+          global $youtube_video_description_5min;
+          global $youtube_video_date_5min;
+          
+          $youtube_video_type = $youtube_video['snippet']['type'];
+          $youtube_video_id = $youtube_video['contentDetails']['upload']['videoId'];
+          $youtube_video_title = $youtube_video['snippet']['title'];
+          $youtube_video_description = str_replace("http://www.nlnvchurch.org", "", $youtube_video['snippet']['description']);
+          $youtube_video_date = substr($youtube_video['snippet']['title'], 0, 8);
+
+          if ($youtube_video_type === 'upload' && !in_array($youtube_video_id, $latest_videos) && strpos($youtube_video_title, '5min') === false) {
+              $videoCreated = $video->addNewVideo(
+                  $youtube_video_id,
+                  $youtube_video_description,
+                  $youtube_video_date,
+                  2,
+                  null
+              );
+      
+              $full_id = $videoCreated->id;
+          } elseif ($youtube_video_type === 'upload' && !in_array($youtube_video_id, $latest_videos) && !$full_id && strpos($youtube_video_title, '5min') > 0) {
+              $is_saved_5min = true;
+              $youtube_video_id_5min = $youtube_video_id;
+              $youtube_video_description_5min = $youtube_video_description;
+              $youtube_video_date_5min = $youtube_video_date;
+          } elseif ($youtube_video_type === 'upload' && !in_array($youtube_video_id, $latest_videos) && $full_id && strpos($youtube_video_title, '5min') > 0) {
+              $video->addNewVideo(
+                  $youtube_video_id,
+                  $youtube_video_description,
+                  $youtube_video_date,
+                  1,
+                  $full_id
+              );
+          }
+      }
+
+      if ($is_saved_5min && $full_id) {
           $video->addNewVideo(
-            $youtube_video_id,
-            $youtube_video_description,
-            $youtube_video_date
+              $youtube_video_id_5min,
+              $youtube_video_description_5min,
+              $youtube_video_date_5min,
+              1,
+              $full_id
           );
-        }
       }
     }
 }
